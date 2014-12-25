@@ -23,7 +23,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <script src="<?php echo base_url(); ?>assets/js/jquery.easydropdown.js"></script>
     <!------ Light Box ------>
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/swipebox.css">
-    <script src="<?php echo base_url(); ?>assets/js/jquery.swipebox.min.js"></script> 
+    <script src="<?php echo base_url(); ?>assets/js/jquery.swipebox.min.js"></script>
     <script type="text/javascript">
       jQuery(function($) {
       $(".swipebox").swipebox();

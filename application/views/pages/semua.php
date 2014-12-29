@@ -40,7 +40,7 @@
             </div> 
             <i class="home"></i>
             <div class="inner_wrap">
-              <h3>kambing kacang di Lumajang</h3>
+              <h3>jual macam - macam kambing kacang di Lumajang</h3>
               <ul class="star1">
                 <h4 class="green">Kambing</h4>
                 <li><a href="#">(Imam)</a></li>
@@ -51,8 +51,8 @@
         <div class="col-md-3">
           <div class="grid1">
             <div class="view view-first">
-              <div class="index_img"><img src="<?php echo base_url(); ?>assets/images/pic1.jpg" class="img-responsive" alt=""/></div>
-              <div class="sale">Lumajang</div>
+              <div class="index_img"><img src="<?php echo base_url(); ?>assets/images/sayuran270x180.jpg" class="img-responsive" alt=""/></div>
+              <div class="sale">Probolinggo</div>
               <div class="mask">
                 <div class="info"><i class="search"> </i> Tengok</div>
                 <ul class="mask_img">
@@ -63,10 +63,10 @@
             </div> 
             <i class="home"></i>
             <div class="inner_wrap">
-              <h3>2 pasang burung untuk dijual di Lumajang</h3>
+              <h3>sayur mayur di jual di probolinggo</h3>
               <ul class="star1">
-                <h4 class="green">Love Bird</h4>
-                <li><a href="#">(Maksum)</a></li>
+                <h4 class="green">Sayur</h4>
+                <li><a href="#">(Nuh)</a></li>
               </ul>
             </div>
           </div>
@@ -109,7 +109,7 @@
             </div> 
             <i class="home"></i>
             <div class="inner_wrap">
-              <h3>jual semut rang - rang dan kroto</h3>
+              <h3>jual semut rang - rang dan kroto di lumajang</h3>
               <ul class="star1">
                 <h4 class="green">Kroto</h4>
                 <li><a href="#">(Dawam)</a></li>

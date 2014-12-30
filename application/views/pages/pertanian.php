@@ -1,5 +1,5 @@
 <div class="living_middle">
-  <div class="container">   
+  <div class="container">
     <div class="col-md-4 wow fadeInLeft" data-wow-delay="0.4s">
       <div class="living_box"><a href="#">
           <img src="<?php echo base_url(); ?>assets/images/bawang merah.jpg" class="img-responsive" alt=""/>

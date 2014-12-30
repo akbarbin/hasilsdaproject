@@ -4,12 +4,13 @@ class Agricultures extends CI_Controller {
 
   public function __construct() {
     parent::__construct();
+    $this->load->model('agricultures_model');
   }
 
   public function index() {
-    $this->load->helper('url');
+    $data['agricultures'] = $this->agricultures_model->get_agricultures();
     $this->load->view('templates/admin/header');
-    $this->load->view('admin/agricultures/index');
+    $this->load->view('admin/agricultures/index', $data);
     $this->load->view('templates/admin/footer');
   }
 

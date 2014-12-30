@@ -2,121 +2,31 @@
   <div class="container">
     <div class="content_middle_box">
       <div class="top_grid">
-        <div class="col-md-3">
-          <div class="grid1">
-            <div class="view view-first">
-              <div class="index_img"><img src="<?php echo base_url(); ?>assets/images/pic1.jpg" class="img-responsive" alt=""/></div>
-              <div class="sale">Lumajang</div>
-              <div class="mask">
-                <div class="info"><i class="search"> </i> Tengok</div>
-                <ul class="mask_img">
-                  <li class="star"><span>+62 856 2471 0902</span></li>
-                  <div class="clearfix"> </div>
+        <?php foreach ($products->result_array() as $products_item): ?>
+          <div class="col-md-3">
+            <div class="grid1">
+              <div class="view view-first">
+                <div class="index_img"><img src="<?php echo base_url() . $products_item['photo_2']; ?> " class="img-responsive" alt=""/></div>
+                <div class="sale"><?php echo $products_item['location'] ?></div>
+                <div class="mask">
+                  <div class="info"><i class="search"> </i> Tengok</div>
+                  <ul class="mask_img">
+                    <li class="star"><span>+62 856 2471 0902</span></li>
+                    <div class="clearfix"> </div>
+                  </ul>
+                </div>
+              </div> 
+              <i class="home"></i>
+              <div class="inner_wrap">
+                <h3><?php echo $products_item['description'] ?></h3>
+                <ul class="star1">
+                  <h4 class="green"><?php echo $products_item['title'] ?></h4>
+                  <li><a href="#"><?php echo $products_item['username'] ?></a></li>
                 </ul>
               </div>
-            </div> 
-            <i class="home"></i>
-            <div class="inner_wrap">
-              <h3>2 pasang burung untuk dijual di Lumajang</h3>
-              <ul class="star1">
-                <h4 class="green">Love Bird</h4>
-                <li><a href="#">(Agus Manuk)</a></li>
-              </ul>
             </div>
           </div>
-        </div>
-        <div class="col-md-3">
-          <div class="grid1">
-            <div class="view view-first">
-              <div class="index_img"><img src="<?php echo base_url(); ?>assets/images/kambing.jpg" class="img-responsive" alt=""/></div>
-              <div class="sale">Lumajang</div>
-              <div class="mask">
-                <div class="info"><i class="search"> </i> Tengok</div>
-                <ul class="mask_img">
-                  <li class="star"><span>+62 856 2471 0902</span></li>
-                  <div class="clearfix"> </div>
-                </ul>
-              </div>
-            </div> 
-            <i class="home"></i>
-            <div class="inner_wrap">
-              <h3>jual macam - macam kambing kacang di Lumajang</h3>
-              <ul class="star1">
-                <h4 class="green">Kambing</h4>
-                <li><a href="#">(Imam)</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="grid1">
-            <div class="view view-first">
-              <div class="index_img"><img src="<?php echo base_url(); ?>assets/images/sayuran270x180.jpg" class="img-responsive" alt=""/></div>
-              <div class="sale">Probolinggo</div>
-              <div class="mask">
-                <div class="info"><i class="search"> </i> Tengok</div>
-                <ul class="mask_img">
-                  <li class="star"><span>+62 856 2471 0902</span></li>
-                  <div class="clearfix"> </div>
-                </ul>
-              </div>
-            </div> 
-            <i class="home"></i>
-            <div class="inner_wrap">
-              <h3>sayur mayur di jual di probolinggo</h3>
-              <ul class="star1">
-                <h4 class="green">Sayur</h4>
-                <li><a href="#">(Nuh)</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="grid1">
-            <div class="view view-first">
-              <div class="index_img"><img src="<?php echo base_url(); ?>assets/images/lovebird2.jpg" class="img-responsive" alt=""/></div>
-              <div class="sale">Lumajang</div>
-              <div class="mask">
-                <div class="info"><i class="search"> </i> Tengok</div>
-                <ul class="mask_img">
-                  <li class="star"><span>+62 856 2471 0902</span></li>
-                  <div class="clearfix"> </div>
-                </ul>
-              </div>
-            </div> 
-            <i class="home"></i>
-            <div class="inner_wrap">
-              <h3>2 pasang burung untuk dijual di Lumajang</h3>
-              <ul class="star1">
-                <h4 class="green">Love Bird</h4>
-                <li><a href="#">(Akbar)</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="grid1">
-            <div class="view view-first">
-              <div class="index_img"><img src="<?php echo base_url(); ?>assets/images/kroto.jpg" class="img-responsive" alt=""/></div>
-              <div class="sale">Lumajang</div>
-              <div class="mask">
-                <div class="info"><i class="search"> </i> Tengok</div>
-                <ul class="mask_img">
-                  <li class="star"><span>+62 856 2471 0902</span></li>
-                  <div class="clearfix"> </div>
-                </ul>
-              </div>
-            </div> 
-            <i class="home"></i>
-            <div class="inner_wrap">
-              <h3>jual semut rang - rang dan kroto di lumajang</h3>
-              <ul class="star1">
-                <h4 class="green">Kroto</h4>
-                <li><a href="#">(Dawam)</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        <?php endforeach; ?>
         <div class="clearfix"> </div>
       </div>
     </div>

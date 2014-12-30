@@ -22,7 +22,7 @@ class Dashboards extends CI_Controller {
   function logout() {
     $this->session->unset_userdata('logged_in');
     session_destroy();
-    redirect('home', 'refresh');
+    redirect('pages/view/semua', 'refresh');
   }
 
 }

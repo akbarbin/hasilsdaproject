@@ -26,7 +26,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <script src="<?php echo base_url(); ?>assets/js/jquery.swipebox.min.js"></script>
     <script type="text/javascript">
       jQuery(function($) {
-      $(".swipebox").swipebox();
+        $(".swipebox").swipebox();
       });
     </script>
     <!--Animation-->
@@ -70,25 +70,25 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <script src="<?php echo base_url(); ?>assets/js/classie.js"></script>
         <script src="<?php echo base_url(); ?>assets/js/uisearch.js"></script>
         <script>
-          new UISearch( document.getElementById( 'sb-search' ) );
+      new UISearch(document.getElementById('sb-search'));
         </script>
         <!----//search-scripts---->
         <div id="loginContainer"><a href="#" id="loginButton"><img src="<?php echo base_url(); ?>assets/images/login.png"><span>Masuk</span></a>
-          <div id="loginBox">                
-            <form id="loginForm">
-              <fieldset id="body">
-                <fieldset>
-                  <label for="email">Alamat Email</label>
-                  <input type="text" name="email" id="email">
-                </fieldset>
-                <fieldset>
-                  <label for="password">Kata Sandi</label>
-                  <input type="password" name="password" id="password">
-                </fieldset>
-                <input type="submit" id="login" value="Masuk">
-                <label for="checkbox"><input type="checkbox" id="checkbox"> <i>Ingatkan saya</i></label>
+          <div id="loginBox">
+            <?php echo form_open('verifylogin', array('id' => 'loginForm')) ?>
+            <fieldset id="body">
+              <fieldset>
+                <label for="email">Alamat Email</label>
+                <input type="text" name="username" id="email">
               </fieldset>
-              <span><a href="#">Lupa kata sandi?</a></span>
+              <fieldset>
+                <label for="password">Kata Sandi</label>
+                <input type="password" name="password" id="password">
+              </fieldset>
+              <input type="submit" id="login" value="Masuk">
+              <label for="checkbox"><input type="checkbox" id="checkbox"> <i>Ingatkan saya</i></label>
+            </fieldset>
+            <span><a href="#">Lupa kata sandi?</a></span>
             </form>
           </div>
         </div>
@@ -96,6 +96,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       </div>
       <div class="clearfix"></div>
     </div>
+    <?php echo $this->session->flashdata('item'); ?>
     <div class="banner wow fadeInUp" data-wow-delay="0.4s">
    	  <div class="container_wrap">
         <h1>Kami siap menjadi konsultan berdagang Anda</h1>
@@ -121,7 +122,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
           <div class="contact_btn">
             <label class="btn1 btn-2 btn-2g"><input name="submit" type="submit" id="submit" value="Rambah"></label>
           </div>
-        </form>        		
+        </form>
         <div class="clearfix"></div>
       </div>
     </div>

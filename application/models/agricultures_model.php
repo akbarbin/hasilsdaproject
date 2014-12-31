@@ -22,8 +22,9 @@ class Agricultures_model extends CI_Model {
   public function get_search() {
     $this->db->select('*');
     $this->db->where(array('location' => $this->input->post('location'), 'product_type' => $this->input->post('product_type')));
-    $this->db->or_like('description', $this->input->post('keyword'), 'both');
-    $this->db->like('title', $this->input->post('keyword'), 'both');
+    if ($this->input->post('keyword') !== '') {
+      $this->db->like('title', $this->input->post('keyword'), 'both');
+    }
     $this->db->from('products');
     $this->db->join('users', 'users.id = products.user_id');
     $query = $this->db->get();

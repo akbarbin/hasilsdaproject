@@ -96,32 +96,29 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       </div>
       <div class="clearfix"></div>
     </div>
-    <?php echo $this->session->flashdata('item'); ?>
     <div class="banner wow fadeInUp" data-wow-delay="0.4s">
    	  <div class="container_wrap">
         <h1>Kami siap menjadi konsultan berdagang Anda</h1>
-        <div class="dropdown-buttons">   
-          <div class="dropdown-button">           			
-            <select class="dropdown" tabindex="9" data-settings='{"wrapperClass":"flat"}'>
-              <option value="0">Lumajang</option>	
-              <option value="1">Probolinggo</option>
-              <option value="2">Jember</option>
+        <?php echo form_open('/pages/search') ?>
+        <div class="dropdown-buttons">
+          <div class="dropdown-button">
+            <select class="dropdown" tabindex="9" data-settings='{"wrapperClass":"flat"}' name="location">
+              <option value="Lumajang">Lumajang</option>
+              <option value="Probolinggo">Probolinggo</option>
+              <option value="Jember">Jember</option>
             </select>
           </div>
           <div class="dropdown-button">
-            <select class="dropdown" tabindex="9" data-settings='{"wrapperClass":"flat"}'>
-              <option value="0">Pertanian</option>	
-              <option value="1">Perternakan</option>
+            <select class="dropdown" tabindex="9" data-settings='{"wrapperClass":"flat"}' name="product_type">
+              <option value="pertanian">Pertanian</option>	
+              <option value="perternakan">Perternakan</option>
             </select>
           </div>
-        </div>  
-        <form>
-          <input type="text" value="Kata kunci, nama, lokasi, ..." onfocus="this.value = '';" onblur="if (this.value == '') {
-                this.value = 'Kata kunci, nama, lokasi, ...';
-              }">
-          <div class="contact_btn">
-            <label class="btn1 btn-2 btn-2g"><input name="submit" type="submit" id="submit" value="Rambah"></label>
-          </div>
+        </div>
+        <input type="text" placeholder="Kata kunci, nama, deskripsi, ..." name="keyword">
+        <div class="contact_btn">
+          <label class="btn1 btn-2 btn-2g"><input name="submit" type="submit" id="submit" value="Rambah"></label>
+        </div>
         </form>
         <div class="clearfix"></div>
       </div>

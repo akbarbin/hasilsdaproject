@@ -24,4 +24,12 @@ class Pages extends CI_Controller {
     $this->load->view('templates/footer', $data);
   }
 
+  public function search() {
+    $data['title'] = "Semua"; // Capitalize the first letter
+    $data['products'] = $this->agricultures_model->get_search();
+    $this->load->view('templates/header', $data);
+    $this->load->view('pages/search', $data);
+    $this->load->view('templates/footer');
+  }
+
 }

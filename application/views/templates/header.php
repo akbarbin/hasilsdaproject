@@ -37,6 +37,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     </script>
   </head>
   <body>
+    <?php require_once "application/views/pages/analyticstracking.php"; ?>
     <div class="header">
       <div class="header-left">
         <div class="logo">

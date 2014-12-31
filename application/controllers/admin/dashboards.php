@@ -15,14 +15,14 @@ class Dashboards extends CI_Controller {
       $this->load->view('templates/admin/footer');
     } else {
       //If no session, redirect to login page
-      redirect('login', 'refresh');
+      redirect('login');
     }
   }
   
   function logout() {
     $this->session->unset_userdata('logged_in');
     session_destroy();
-    redirect('pages/view/semua', 'refresh');
+    redirect('pages/view/semua');
   }
 
 }

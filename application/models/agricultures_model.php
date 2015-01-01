@@ -6,17 +6,30 @@ class Agricultures_model extends CI_Model {
     $this->load->database();
   }
 
-  public function get_agricultures($id = FALSE) {
-    if ($id === FALSE) {
-      $this->db->select('*');
-      $this->db->from('products');
-      $this->db->join('users', 'users.id = products.user_id');
-      $query = $this->db->get();
-      return $query;
-    }
+  public function get_all_products() {
+    $this->db->select('*');
+    $this->db->from('products');
+    $this->db->join('users', 'users.id = products.user_id');
+    $query = $this->db->get();
+    return $query;
+  }
 
-    $query = $this->db->get_where('products', array('id' => $id));
-    return $query->row_array();
+  public function get_all_agricultures() {
+    $this->db->select('*');
+    $this->db->from('products');
+    $this->db->join('users', 'users.id = products.user_id');
+    $this->db->where('product_type', 'pertanian');
+    $query = $this->db->get();
+    return $query;
+  }
+
+  public function get_all_animal_farms() {
+    $this->db->select('*');
+    $this->db->from('products');
+    $this->db->join('users', 'users.id = products.user_id');
+    $this->db->where('product_type', 'perternakan');
+    $query = $this->db->get();
+    return $query;
   }
 
   public function get_search() {
@@ -25,6 +38,18 @@ class Agricultures_model extends CI_Model {
     if ($this->input->post('keyword') !== '') {
       $this->db->like('title', $this->input->post('keyword'), 'both');
     }
+    $this->db->from('products');
+    $this->db->join('users', 'users.id = products.user_id');
+    $query = $this->db->get();
+    return $query;
+  }
+
+  public function get_search_icon() {
+    $this->db->select('*');
+    $this->db->like('title', $this->input->post('search'), 'both');
+    $this->db->or_like('description', $this->input->post('search'), 'both');
+    $this->db->or_like('location', $this->input->post('search'), 'both');
+    $this->db->or_like('product_type', $this->input->post('search'), 'both');
     $this->db->from('products');
     $this->db->join('users', 'users.id = products.user_id');
     $query = $this->db->get();

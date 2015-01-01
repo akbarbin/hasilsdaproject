@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
   <head>
-    <title>Hasil Sumber Daya Alam Indonesia | Home :: hasilsda</title>
+    <title>Konsultan Berdagang Hasil Sumber Daya Alam Indonesia :: Rumahsda</title>
     <link href="<?php echo base_url(); ?>assets/css/bootstrap.css" rel='stylesheet' type='text/css' />
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <!-- Custom Theme files -->
@@ -59,7 +59,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <!-- start search-->
         <div class="search-box">
           <div id="sb-search" class="sb-search">
-            <form>
+            <?php echo form_open('/pages/search') ?>
               <input class="sb-search-input" placeholder="Masukkan kata kunci..." type="search" name="search" id="search">
               <input class="sb-search-submit" type="submit" value="">
               <span class="sb-icon-search"> </span>

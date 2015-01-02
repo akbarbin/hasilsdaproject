@@ -28,7 +28,7 @@
           <li><a href=""><i class="google"> </i> </a></li>
         </ul>
         <div class="copy wow fadeInRight" data-wow-delay="0.4s">
-          <p>&copy; Di ubah oleh <a href="http://akbarbinstagingapps.tk/" target="_blank">IT Bsaaal</a> </p>
+          <p>&copy; Di ubah oleh <a href="http://akbarbin-stagingapps.tk/" target="_blank">Akbarbin</a> </p>
         </div>
       </div>
       <div class="clearfix"> </div>

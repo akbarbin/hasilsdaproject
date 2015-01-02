@@ -1,28 +1,34 @@
-<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php
+
+if (!defined('BASEPATH'))
+  exit('No direct script access allowed');
 session_start(); //we need to call PHP's session object to access it through CI
+
 class Dashboards extends CI_Controller {
 
   public function __construct() {
     parent::__construct();
+    $this->_before_filter();
   }
 
   public function index() {
-    if ($this->session->userdata('logged_in')) {
-      $session_data = $this->session->userdata('logged_in');
-      $data['username'] = $session_data['username'];
-      $this->load->view('templates/admin/header');
-      $this->load->view('admin/dashboards/index', $data);
-      $this->load->view('templates/admin/footer');
-    } else {
-      //If no session, redirect to login page
-      redirect('login');
-    }
+    $session_data = $this->session->userdata('logged_in');
+    $data['username'] = $session_data['username'];
+    $this->load->view('templates/admin/header');
+    $this->load->view('admin/dashboards/index', $data);
+    $this->load->view('templates/admin/footer');
   }
-  
+
   function logout() {
     $this->session->unset_userdata('logged_in');
     session_destroy();
     redirect('pages/view/semua');
+  }
+
+  private function _before_filter() {
+    if ($this->session->userdata('logged_in') == null) {
+      redirect('login');
+    }
   }
 
 }

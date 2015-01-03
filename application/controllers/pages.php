@@ -5,6 +5,7 @@ class Pages extends CI_Controller {
   public function __construct() {
     parent::__construct();
     $this->load->model('agricultures_model');
+    $this->load->model('subscribes_model');
   }
 
   public function view($page = 'home') {
@@ -30,7 +31,7 @@ class Pages extends CI_Controller {
 
   public function search() {
     $data['title'] = "Semua"; // Capitalize the first letter
-    
+
     if ($this->input->post('search') == '') {
       $data['products'] = $this->agricultures_model->get_search();
     } else {
@@ -38,6 +39,15 @@ class Pages extends CI_Controller {
     }
     $this->load->view('templates/header', $data);
     $this->load->view('pages/search', $data);
+    $this->load->view('templates/footer');
+  }
+
+  public function langganan() {
+    $data['title'] = "Semua";
+    $data['products'] = $this->agricultures_model->get_all_products();
+    $this->subscribes_model->set_subscribe();
+    $this->load->view('templates/header', $data);
+    $this->load->view('pages/semua', $data);
     $this->load->view('templates/footer');
   }
 

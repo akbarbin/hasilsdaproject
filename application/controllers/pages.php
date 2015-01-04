@@ -38,7 +38,7 @@ class Pages extends CI_Controller {
       $data['products'] = $this->agricultures_model->get_search_icon();
     }
     $this->load->view('templates/header', $data);
-    $this->load->view('pages/search', $data);
+    $this->load->view('pages/semua', $data);
     $this->load->view('templates/footer');
   }
 

@@ -48,7 +48,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <li class="<?= ($this->router->fetch_class() == "pages" and $title == "Semua") ? "active" : "" ?>"><a href="<?php echo base_url(); ?>index.php/pages/view/semua">Semua</a></li>
             <li class="<?= ($this->router->fetch_class() == "pages" and $title == "Pertanian") ? "active" : "" ?>"><a href="<?php echo base_url(); ?>index.php/pages/view/pertanian">Pertanian</a></li>
             <li class="<?= ($this->router->fetch_class() == "pages" and $title == "Perternakan") ? "active" : "" ?>"><a href="<?php echo base_url(); ?>index.php/pages/view/perternakan">Perternakan</a></li>
-            <li class="<?= ($this->router->fetch_class() == "pages" and $title == "Tentangkami") ? "active" : "" ?>"><a href="<?php echo base_url(); ?>index.php/pages/view/tentangkami">Tentang hsda</a></li>
+            <li class="<?= ($this->router->fetch_class() == "pages" and $title == "Tentangkami") ? "active" : "" ?>"><a href="<?php echo base_url(); ?>index.php/pages/view/tentangkami">Tentang Rsda</a></li>
             <div class="clearfix"></div>
           </ul>
           <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/responsive-nav.js"></script>
@@ -115,7 +115,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             </select>
           </div>
         </div>
-        <input type="text" placeholder="Kata kunci, nama, deskripsi, ..." name="keyword">
+        <input type="text" placeholder="Letakkan kata kunci ..." name="keyword">
         <div class="contact_btn">
           <label class="btn1 btn-2 btn-2g"><input name="submit" type="submit" id="submit" value="Rambah"></label>
         </div>

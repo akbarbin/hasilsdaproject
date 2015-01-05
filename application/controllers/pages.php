@@ -45,7 +45,7 @@ class Pages extends CI_Controller {
   public function langganan() {
     $data['title'] = "Semua";
     $data['products'] = $this->agricultures_model->get_all_products();
-    $this->form_validation->set_rules('email', 'Email', 'required');
+    $this->form_validation->set_rules('email', 'Email', 'required|valid_email|is_unique[subcribes.sub_email]');
     if ($this->form_validation->run() !== FALSE) {
       $this->subscribes_model->set_subscribe();
     }

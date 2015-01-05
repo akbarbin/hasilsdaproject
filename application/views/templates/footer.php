@@ -2,6 +2,7 @@
   <div class="container">
     <div class="footer_top">
       <h3>Kami menyediakan langganan produk terbaru kami</h3>
+      <?php echo validation_errors() ?>
       <?php echo form_open("pages/langganan") ?>
       <span>
         <i><img src="<?php echo base_url(); ?>assets/images/mail.png" alt="mail"></i>

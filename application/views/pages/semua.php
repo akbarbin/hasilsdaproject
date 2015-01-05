@@ -31,8 +31,8 @@
       </div>
     </div>
     <div class="offering">
-      <h2>Apa yang Hasilsda tawarkan kepada Anda?</h2>
-      <h3>Hasilsda menawarkan kejujuran, keadilan, kemakmuran, dan kerjasama dengan semua pihak yang terlibat dalam berdagang</h3>
+      <h2>Apa yang Rumahsda tawarkan kepada Anda?</h2>
+      <h3>Rumahsda menawarkan kejujuran, keadilan, kemakmuran, dan kerjasama dengan semua pihak yang terlibat dalam berdagang</h3>
       <div class="real">
         <h4>Layanan</h4>
         <div class="col-sm-6">
@@ -48,7 +48,7 @@
           <ul class="service_grid">
             <i class="s2"> </i>
             <li class="desc1 wow fadeInRight" data-wow-delay="0.4s">
-              <p>Kami menyediakan petani dan peternak yang terdaftar di hasilsda untuk saat ini lokasinya di Jawa Timur. Kami mengharap semua pihak dalam berjalan bersama sama agar terbentuk sebuah hubungan yang baik. Kami ingin menjadi konsultan yang membantu Anda dalam berdagang.</p>
+              <p>Kami menyediakan petani dan peternak yang hanya terdaftar di Rumahsda.com. Lokasinya pertanian dan perternakan saat ini masih di wilayah Jawa Timur. Kami mengharap semua pihak dalam berjalan bersama - sama agar terbentuk sebuah hubungan yang baik. Kami ingin menjadi konsultan yang membantu Anda dalam berdagang.</p>
             </li>
             <div class="clearfix"> </div>
           </ul>

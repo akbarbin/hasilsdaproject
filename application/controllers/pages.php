@@ -38,14 +38,17 @@ class Pages extends CI_Controller {
       $data['products'] = $this->agricultures_model->get_search_icon();
     }
     $this->load->view('templates/header', $data);
-    $this->load->view('pages/search', $data);
+    $this->load->view('pages/semua', $data);
     $this->load->view('templates/footer');
   }
 
   public function langganan() {
     $data['title'] = "Semua";
     $data['products'] = $this->agricultures_model->get_all_products();
-    $this->subscribes_model->set_subscribe();
+    $this->form_validation->set_rules('email', 'Email', 'required');
+    if ($this->form_validation->run() !== FALSE) {
+      $this->subscribes_model->set_subscribe();
+    }
     $this->load->view('templates/header', $data);
     $this->load->view('pages/semua', $data);
     $this->load->view('templates/footer');

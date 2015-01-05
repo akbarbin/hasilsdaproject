@@ -1501,6 +1501,11 @@ ul.service_grid li.desc1 p{
 	font-weight: 500;
 	margin-bottom:2em;
 }
+.footer .footer_top p{
+        color: #fff;
+        margin-left: -225px;
+	font-size: 1em;
+}
 .footer span {
 	background: rgba(111, 111, 111, 0.17);
 	border: 1px solid #5b5953;

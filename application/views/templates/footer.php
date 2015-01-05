@@ -2,6 +2,7 @@
   <div class="container">
     <div class="footer_top">
       <h3>Kami menyediakan langganan produk terbaru kami</h3>
+      <?php echo validation_errors() ?>
       <?php echo form_open("pages/langganan") ?>
       <span>
         <i><img src="<?php echo base_url(); ?>assets/images/mail.png" alt="mail"></i>
@@ -13,7 +14,7 @@
     </div>
     <div class="footer_grids">
       <div class="footer-grid">
-        <h4>Info Hasilsda</h4>
+        <h4>Info Rumahsda</h4>
         <ul class="list1">
           <li><a href="<?php echo base_url(); ?>index.php/pages/view/hubungikami">Hubungi Kami</a></li>
         </ul>

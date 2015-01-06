@@ -2,14 +2,14 @@
   <div class="container">
     <div class="footer_top">
       <h3>Kami menyediakan langganan produk terbaru kami</h3>
-      <?php echo validation_errors() ?>
       <?php echo form_open("pages/langganan") ?>
       <span>
         <i><img src="<?php echo base_url(); ?>assets/images/mail.png" alt="mail"></i>
-        <input type="text" placeholder="Masukkan alamat email" name="email">
+        <input type="text" placeholder="Masukkan alamat email" name="sub_email">
         <label class="btn1 btn2 btn-2 btn-2g"> <input name="submit" type="submit" id="submit" value="Langganan"> </label>
         <div class="clearfix"> </div>
       </span>
+      <?php echo form_error('sub_email'); ?>
       </form>
     </div>
     <div class="footer_grids">

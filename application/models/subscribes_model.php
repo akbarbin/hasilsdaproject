@@ -9,7 +9,7 @@ class Subscribes_model extends CI_Model {
   public function set_subscribe() {
     
     $data = array(
-        'sub_email' => $this->input->post('email')
+        'sub_email' => $this->input->post('sub_email')
     );
     return $this->db->insert('subscribes', $data);
   }

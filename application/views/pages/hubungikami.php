@@ -21,23 +21,16 @@
 <div class="living_middle wow fadeInUp" data-wow-delay="0.4s">
   <div class="container">
     <h2>Permintaan</h2>
-    <form method="post" action="contact-post.html">
+    <?php echo validation_errors(); ?>
+    <?php echo form_open("pages/permintaan") ?>
       <div class="to">
-        <input type="text" class="text" value="Nama" onfocus="this.value = '';" onblur="if (this.value == '') {
-              this.value = 'Nama';
-            }">
-        <input type="text" class="text" value="Alamat Email" onfocus="this.value = '';" onblur="if (this.value == '') {
-              this.value = 'Alamat Email';
-            }" style="margin-left:20px">
-        <input type="text" class="text" value="No Telp" onfocus="this.value = '';" onblur="if (this.value == '') {
-              this.value = 'No Telp';
-            }" style="margin-left:20px">
+        <input type="text" name="name" class="text" value="<?php echo set_value('name'); ?>" placeholder="Nama">
+        <input type="text" name="email" class="text" value="<?php echo set_value('email'); ?>" placeholder="Alamat Email" style="margin-left:20px">
+        <input type="text" name="no_telp"class="text" value="<?php echo set_value('no_telp'); ?>" placeholder="No Telp" style="margin-left:20px">
         <div class="clearfix"></div>
       </div>
       <div class="text">
-        <textarea value="Permintaan:" onfocus="this.value = '';" onblur="if (this.value == '') {
-              this.value = 'Permintaan';
-            }">Permintaan:</textarea>
+        <textarea name="content" placeholder="Permintaan"><?php echo set_value('content'); ?></textarea>
       </div>
       <div class="form-submit1">
         <input name="submit" type="submit" id="submit" value="Kirim permintaan">

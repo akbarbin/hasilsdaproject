@@ -9,7 +9,7 @@ class Agricultures_model extends CI_Model {
   public function get_all_products() {
     $this->db->select('*');
     $this->db->from('products');
-    $this->db->join('users', 'users.id = products.user_id');
+    $this->db->join('users', 'users.usr_id = products.pr_user_id');
     $query = $this->db->get();
     return $query;
   }
@@ -17,8 +17,8 @@ class Agricultures_model extends CI_Model {
   public function get_all_agricultures() {
     $this->db->select('*');
     $this->db->from('products');
-    $this->db->join('users', 'users.id = products.user_id');
-    $this->db->where('product_type', 'pertanian');
+    $this->db->join('users', 'users.usr_id = products.pr_user_id');
+    $this->db->where('pr_type', 'pertanian');
     $query = $this->db->get();
     return $query;
   }
@@ -26,8 +26,8 @@ class Agricultures_model extends CI_Model {
   public function get_all_animal_farms() {
     $this->db->select('*');
     $this->db->from('products');
-    $this->db->join('users', 'users.id = products.user_id');
-    $this->db->where('product_type', 'perternakan');
+    $this->db->join('users', 'users.usr_id = products.pr_user_id');
+    $this->db->where('pr_type', 'perternakan');
     $query = $this->db->get();
     return $query;
   }

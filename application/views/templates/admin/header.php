@@ -22,7 +22,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Admin Hasil Sumber Daya Alam Indonesia</a>
+          <a class="navbar-brand" href="#">Admin Rumah Sumber Daya Alam Indonesia</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">

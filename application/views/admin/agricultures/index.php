@@ -12,10 +12,10 @@
     <tbody>
       <?php foreach ($agricultures->result_array() as $agricultures_item): ?>
         <tr>
-          <td><?php echo $agricultures_item['title'] ?></td>
-          <td><?php echo $agricultures_item['description'] ?></td>
-          <td><?php echo $agricultures_item['location'] ?></td>
-          <td><?php echo $agricultures_item['username'] ?></td>
+          <td><?php echo $agricultures_item['pr_title'] ?></td>
+          <td><?php echo $agricultures_item['pr_description'] ?></td>
+          <td><?php echo $agricultures_item['pr_location'] ?></td>
+          <td><?php echo $agricultures_item['usr_username'] ?></td>
           <td><a href="#">Ubah</a> | <a href="#">Hapus</a> | <a href="lihat.html">Lihat</a></td>
         </tr>
       <?php endforeach; ?>

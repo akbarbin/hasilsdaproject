@@ -6,8 +6,8 @@
           <div class="col-md-3">
             <div class="grid1">
               <div class="view view-first">
-                <div class="index_img"><img src="<?php echo base_url() . $products_item['photo_2']; ?> " class="img-responsive" alt=""/></div>
-                <div class="sale"><?php echo $products_item['location'] ?></div>
+                <div class="index_img"><img src="<?php echo base_url() . $products_item['pr_photo_2']; ?> " class="img-responsive" alt=""/></div>
+                <div class="sale"><?php echo $products_item['pr_location'] ?></div>
                 <div class="mask">
                   <div class="info"><i class="search"> </i> Tengok</div>
                   <ul class="mask_img">
@@ -18,10 +18,10 @@
               </div> 
               <i class="home"></i>
               <div class="inner_wrap">
-                <h3><?php echo $products_item['description'] ?></h3>
+                <h3><?php echo $products_item['pr_description'] ?></h3>
                 <ul class="star1">
-                  <h4 class="green"><?php echo $products_item['title'] ?></h4>
-                  <li><a href="#"><?php echo $products_item['username'] ?></a></li>
+                  <h4 class="green"><?php echo $products_item['pr_title'] ?></h4>
+                  <li><a href="#"><?php echo $products_item['usr_username'] ?></a></li>
                 </ul>
               </div>
             </div>

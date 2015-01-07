@@ -14,6 +14,8 @@ class Dashboards extends CI_Controller {
   public function index() {
     $session_data = $this->session->userdata('logged_in');
     $data['username'] = $session_data['username'];
+    $this->load->database();
+    $data['total_requests'] = $this->db->count_all_results('requests');
     $this->load->view('templates/admin/header');
     $this->load->view('admin/dashboards/index', $data);
     $this->load->view('templates/admin/footer');

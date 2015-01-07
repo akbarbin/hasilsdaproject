@@ -4,7 +4,7 @@
   <div class="row">
     <!-- center left-->	
     <div class="col-md-6">
-      <div class="well">Jumlah Permintaan <span class="badge pull-right">20</span></div>
+      <div class="well">Jumlah Permintaan <span class="badge pull-right"><?php echo $total_requests ;?></span></div>
       <hr>
     </div><!--/col-->
   </div><!--/row-->

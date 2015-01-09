@@ -12,7 +12,7 @@
     </div>
     <div class="panel-body">
 
-      <?php echo form_open("admin/agricultures/create", array('class' => 'form form-vertical')) ?>
+      <?php echo form_open("admin/animal_farms/create", array('class' => 'form form-vertical')) ?>
 
       <div class="control-group">
         <label>Judul</label>
@@ -53,7 +53,7 @@
         <label>Kategori</label>
         <div class="controls">
           <p>Pertanian</p>
-          <input type="hidden" name="pr_type" value="pertanian">
+          <input type="hidden" name="pr_type" value="perternakan">
         </div>
       </div>
 

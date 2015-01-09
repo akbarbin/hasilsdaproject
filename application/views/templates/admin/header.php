@@ -22,7 +22,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Admin Hasil Sumber Daya Alam Indonesia</a>
+          <a class="navbar-brand" href="#">Admin Rumah Sumber Daya Alam Indonesia</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -52,5 +52,6 @@
             <li><a href="<?php echo base_url(); ?>index.php/admin/animal_farms"><i class="glyphicon glyphicon-link"></i> Perternakan</a></li>
             <li><a href="<?php echo base_url(); ?>index.php/admin/abouts"><i class="glyphicon glyphicon-list-alt"></i> Tentang Kami</a></li>
             <li><a href="<?php echo base_url(); ?>index.php/admin/requests"><i class="glyphicon glyphicon-book"></i> Permintaan</a></li>
+            <li><a href="<?php echo base_url(); ?>index.php/admin/users"><i class="glyphicon glyphicon-briefcase"></i> User</a></li>
           </ul>
         </div><!-- /col-3 -->

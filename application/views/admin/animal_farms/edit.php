@@ -1,6 +1,6 @@
 <div class="col-sm-9">
   <!-- column 2 -->
-  <h1 class="page-header">Halaman Buat</h1>
+  <h1 class="page-header">Halaman Edit</h1>
 
   <?php echo validation_errors() ?>
   <div class="panel panel-default">
@@ -11,27 +11,27 @@
       </div>
     </div>
     <div class="panel-body">
-
-      <?php echo form_open("admin/agricultures/create", array('class' => 'form form-vertical')) ?>
+      
+      <?php echo form_open("admin/animal_farms/edit/" . $animal_farm['pr_id'], array('class' => 'form form-vertical')) ?>
 
       <div class="control-group">
         <label>Judul</label>
         <div class="controls">
-          <input type="text" value="<?php echo set_value('pr_title'); ?>" name="pr_title" class="form-control" placeholder="Masukkan Judul">
+          <input type="text" value="<?php echo $animal_farm['pr_title'] ?>" name="pr_title" class="form-control" placeholder="Masukkan Judul">
         </div>
       </div>
 
       <div class="control-group">
         <label>Deskripsi</label>
         <div class="controls">
-          <textarea class="form-control" value="<?php echo set_value('pr_description'); ?> "name="pr_description"></textarea>
+          <textarea class="form-control" value="<?php echo $animal_farm['pr_description'] ?>"name="pr_description"><?php echo $animal_farm['pr_description'] ?></textarea>
         </div>
       </div>
 
       <div class="control-group">
         <label>Lokasi</label>
         <div class="controls">
-          <input type="text" value="<?php echo set_value('location'); ?>" name="pr_location" class="form-control" placeholder="Masukkan Lokasi">
+          <input type="text" value="<?php echo $animal_farm['pr_location']; ?>" name="pr_location" class="form-control" placeholder="Masukkan Lokasi">
         </div>
       </div>
 
@@ -53,7 +53,7 @@
         <label>Kategori</label>
         <div class="controls">
           <p>Pertanian</p>
-          <input type="hidden" name="pr_type" value="pertanian">
+          <input type="hidden" name="pr_type" value="perternakan">
         </div>
       </div>
 
@@ -62,7 +62,7 @@
         <div class="controls">
           <select class="form-control" name="pr_user_id">
             <?php foreach ($option_users->result_array() as $option_user_item): ?>
-              <option value="<?php echo $option_user_item['usr_id'] ?>" <?php echo ($option_user_item['usr_id'] == set_value('pr_user_id')) ? "selected" : "" ?>><?php echo $option_user_item['usr_username'] ?></option>
+              <option value="<?php echo $option_user_item['usr_id'] ?>" <?php echo ($option_user_item['usr_id'] == $animal_farm['pr_user_id']) ? "selected" : "" ?>><?php echo $option_user_item['usr_username'] ?></option>
             <?php endforeach; ?>
           </select>
         </div>

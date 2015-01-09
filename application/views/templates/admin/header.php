@@ -52,5 +52,6 @@
             <li><a href="<?php echo base_url(); ?>index.php/admin/animal_farms"><i class="glyphicon glyphicon-link"></i> Perternakan</a></li>
             <li><a href="<?php echo base_url(); ?>index.php/admin/abouts"><i class="glyphicon glyphicon-list-alt"></i> Tentang Kami</a></li>
             <li><a href="<?php echo base_url(); ?>index.php/admin/requests"><i class="glyphicon glyphicon-book"></i> Permintaan</a></li>
+            <li><a href="<?php echo base_url(); ?>index.php/admin/users"><i class="glyphicon glyphicon-briefcase"></i> User</a></li>
           </ul>
         </div><!-- /col-3 -->

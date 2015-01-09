@@ -1,6 +1,6 @@
 <div class="col-sm-9">
   <!-- column 2 -->
-  <h1 class="page-header">Halaman Perternakan</h1>
+  <h1 class="page-header">Halaman Pertanian</h1>
 
   <a href="<?php echo base_url("index.php/admin/agricultures/create"); ?>" class="btn btn-primary">Tambah</a>
   <table class="table table-striped">

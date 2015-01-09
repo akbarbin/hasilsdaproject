@@ -41,12 +41,6 @@ class Agricultures extends CI_Controller {
     $this->load->view('templates/admin/footer');
   }
 
-  private function _before_filter() {
-    if ($this->session->userdata('logged_in') == null) {
-      redirect('login');
-    }
-  }
-
   public function edit($agriculture_id) {
     $data['agriculture'] = $this->get_obj_agriculture($agriculture_id);
     $data['option_users'] = $this->users_model->get_options_users();
@@ -72,12 +66,19 @@ class Agricultures extends CI_Controller {
     redirect('admin/agricultures');
   }
 
+  //private function
   private function get_obj_agriculture($agriculture_id) {
     $data['agriculture'] = $this->agricultures_model->get_agriculture($agriculture_id);
     if (empty($data['agriculture'])) {
       show_404();
     }
     return $data['agriculture'];
+  }
+
+  private function _before_filter() {
+    if ($this->session->userdata('logged_in') == null) {
+      redirect('login');
+    }
   }
 
 }

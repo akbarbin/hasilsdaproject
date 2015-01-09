@@ -1,24 +1,16 @@
 <?php
 
-class Agricultures_model extends CI_Model {
+class Animal_farms_model extends CI_Model {
 
   public function __construct() {
     $this->load->database();
   }
 
-  public function get_all_products() {
+  public function get_all_animal_farms() {
     $this->db->select('*');
     $this->db->from('products');
     $this->db->join('users', 'users.usr_id = products.pr_user_id');
-    $query = $this->db->get();
-    return $query;
-  }
-
-  public function get_all_agricultures() {
-    $this->db->select('*');
-    $this->db->from('products');
-    $this->db->join('users', 'users.usr_id = products.pr_user_id');
-    $this->db->where('pr_type', 'pertanian');
+    $this->db->where('pr_type', 'perternakan');
     $query = $this->db->get();
     return $query;
   }
@@ -47,8 +39,8 @@ class Agricultures_model extends CI_Model {
     return $query;
   }
 
-  //insert agricultures
-  public function set_agriculture() {
+  //insert animal_farms
+  public function set_animal_farm() {
     $data = array(
         'pr_title' => $this->input->post('pr_title'),
         'pr_description' => $this->input->post('pr_description'),
@@ -61,8 +53,8 @@ class Agricultures_model extends CI_Model {
     return $this->db->insert('products', $data);
   }
 
-  //u agricultures
-  public function update_agriculture($agriculture_id) {
+  //u animal_farms
+  public function update_animal_farm($animal_farm_id) {
     $data = array(
         'pr_title' => $this->input->post('pr_title'),
         'pr_description' => $this->input->post('pr_description'),
@@ -72,17 +64,17 @@ class Agricultures_model extends CI_Model {
         'pr_created_at' => date("Y-m-d H:i:s"),
         'pr_updated_at' => date("Y-m-d H:i:s")
     );
-    $this->db->where('pr_id', $agriculture_id);
+    $this->db->where('pr_id', $animal_farm_id);
     $this->db->update('products', $data);
   }
 
-  //find agriculture by pr_id
-  public function get_agriculture($agriculture_id) {
+  //find animal_farm by pr_id
+  public function get_animal_farm($animal_farm_id) {
     $this->db->select(
             'pr_id, pr_title, pr_description, pr_location, pr_photo, pr_user_id, usr_username'
     );
     $this->db->join('users', 'users.usr_id = products.pr_user_id');
-    $query = $this->db->get_where('products', array('pr_id' => $agriculture_id));
+    $query = $this->db->get_where('products', array('pr_id' => $animal_farm_id));
     return $query->row_array();
   }
 

@@ -2,14 +2,24 @@
   <!-- column 2 -->
   <h1 class="page-header">Halaman Permintaan</h1>
 
-  <a href="create.html" class="btn btn-primary">Tambah</a>
   <table class="table table-striped">
     <thead>
-      <tr><th>Nama</th><th>Judul</th><th>Deskripsi</th><th>Lokasi</th><th>Mengatur</th></tr>
+      <tr>
+        <th>Nama</th><th>Email</th><th>No Telp</th><th>Konten</th><th>Mengatur</th>
+      </tr>
     </thead>
     <tbody>
-      <tr><td>Min</td><td>Minta Kuda</td><td>Kami ingin beli kuda</td><td>Lumajang</td><td><a href="#">Ubah</a> | <a href="#">Hapus</a> | <a href="lihat.html">Lihat</a></td></tr>
-      <tr><td>Joko</td><td>Butuh Sapi</td><td>Sapi lemosin</td><td>Lumajang</td><td><a href="#">Ubah</a> | <a href="#">Hapus</a> | <a href="lihat.html">Lihat</a></td></tr>
+      <?php foreach ($requests->result_array() as $request_item): ?>
+        <tr>
+          <td><?php echo $request_item['req_name'] ?></td>
+          <td><?php echo $request_item['req_email'] ?></td>
+          <td><?php echo $request_item['req_no_telp'] ?></td>
+          <td><?php echo $request_item['req_content'] ?></td>
+          <td>
+            <a href="<?php echo base_url("index.php/admin/requests/reply/" . $request_item['req_id']) ?>">Balas</a>
+          </td>
+        </tr>
+      <?php endforeach; ?>
     </tbody>
   </table>
 </div><!--/col-span-9-->

@@ -58,10 +58,10 @@ class Pages extends CI_Controller {
 
   public function permintaan() {
     $data['title'] = "hubungikami";
-    $this->form_validation->set_rules('name', 'Nama', 'required');
-    $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
-    $this->form_validation->set_rules('no_telp', 'No Telp', 'required|numeric');
-    $this->form_validation->set_rules('content', 'Permintaan', 'required');
+    $this->form_validation->set_rules('req_name', 'Nama', 'required');
+    $this->form_validation->set_rules('req_email', 'Email', 'required|valid_email');
+    $this->form_validation->set_rules('req_no_telp', 'No Telp', 'required|numeric');
+    $this->form_validation->set_rules('req_content', 'Permintaan', 'required');
 
     $this->load->model('requests_model');
     if ($this->form_validation->run() === FALSE) {

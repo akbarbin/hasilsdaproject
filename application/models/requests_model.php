@@ -15,12 +15,12 @@ class Requests_model extends CI_Model {
   public function set_request() {
 
     $data = array(
-        'name' => $this->input->post('name'),
-        'email' => $this->input->post('email'),
-        'no_telp' => $this->input->post('no_telp'),
-        'content' => $this->input->post('content'),
-        'created_at' => date("Y-m-d H:i:s"),
-        'updated_at' => date("Y-m-d H:i:s")
+        'req_name' => $this->input->post('req_name'),
+        'req_email' => $this->input->post('req_email'),
+        'req_no_telp' => $this->input->post('req_no_telp'),
+        'req_content' => $this->input->post('req_content'),
+        'req_created_at' => date("Y-m-d H:i:s"),
+        'req_updated_at' => date("Y-m-d H:i:s")
     );
     return $this->db->insert('requests', $data);
   }

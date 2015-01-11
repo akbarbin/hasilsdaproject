@@ -23,26 +23,26 @@ class Agricultures_model extends CI_Model {
     return $query;
   }
 
-  public function get_search() {
+  public function get_search_products() {
     $this->db->select('*');
-    $this->db->where(array('location' => $this->input->post('location'), 'product_type' => $this->input->post('product_type')));
+    $this->db->where(array('pr_location' => $this->input->post('pr_location'), 'pr_type' => $this->input->post('pr_type')));
     if ($this->input->post('keyword') !== '') {
-      $this->db->like('title', $this->input->post('keyword'), 'both');
+      $this->db->like('pr_title', $this->input->post('keyword'), 'both');
     }
     $this->db->from('products');
-    $this->db->join('users', 'users.id = products.user_id');
+    $this->db->join('users', 'users.usr_id = products.pr_user_id');
     $query = $this->db->get();
     return $query;
   }
 
-  public function get_search_icon() {
+  public function get_search_products_icon() {
     $this->db->select('*');
-    $this->db->like('title', $this->input->post('search'), 'both');
-    $this->db->or_like('description', $this->input->post('search'), 'both');
-    $this->db->or_like('location', $this->input->post('search'), 'both');
-    $this->db->or_like('product_type', $this->input->post('search'), 'both');
+    $this->db->like('pr_title', $this->input->post('search'), 'both');
+    $this->db->or_like('pr_description', $this->input->post('search'), 'both');
+    $this->db->or_like('pr_location', $this->input->post('search'), 'both');
+    $this->db->or_like('pr_type', $this->input->post('search'), 'both');
     $this->db->from('products');
-    $this->db->join('users', 'users.id = products.user_id');
+    $this->db->join('users', 'users.usr_id = products.pr_user_id');
     $query = $this->db->get();
     return $query;
   }

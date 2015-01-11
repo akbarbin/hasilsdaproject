@@ -79,11 +79,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <fieldset id="body">
               <fieldset>
                 <label for="email">Alamat Email</label>
-                <input type="text" name="username" id="email">
+                <input type="text" name="usr_username" id="email">
               </fieldset>
               <fieldset>
                 <label for="password">Kata Sandi</label>
-                <input type="password" name="password" id="password">
+                <input type="password" name="usr_password" id="password">
               </fieldset>
               <input type="submit" id="login" value="Masuk">
               <label for="checkbox"><input type="checkbox" id="checkbox"> <i>Ingatkan saya</i></label>
@@ -102,14 +102,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <?php echo form_open('/pages/search') ?>
         <div class="dropdown-buttons">
           <div class="dropdown-button">
-            <select class="dropdown" tabindex="9" data-settings='{"wrapperClass":"flat"}' name="location">
+            <select class="dropdown" tabindex="9" data-settings='{"wrapperClass":"flat"}' name="pr_location">
               <option value="Lumajang">Lumajang</option>
               <option value="Probolinggo">Probolinggo</option>
               <option value="Jember">Jember</option>
             </select>
           </div>
           <div class="dropdown-button">
-            <select class="dropdown" tabindex="9" data-settings='{"wrapperClass":"flat"}' name="product_type">
+            <select class="dropdown" tabindex="9" data-settings='{"wrapperClass":"flat"}' name="pr_type">
               <option value="pertanian">Pertanian</option>	
               <option value="perternakan">Perternakan</option>
             </select>

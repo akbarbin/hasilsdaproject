@@ -33,9 +33,9 @@ class Pages extends CI_Controller {
     $data['title'] = "Semua"; // Capitalize the first letter
 
     if ($this->input->post('search') == '') {
-      $data['products'] = $this->agricultures_model->get_search();
+      $data['products'] = $this->agricultures_model->get_search_products();
     } else {
-      $data['products'] = $this->agricultures_model->get_search_icon();
+      $data['products'] = $this->agricultures_model->get_search_products_icon();
     }
     $this->load->view('templates/header', $data);
     $this->load->view('pages/semua', $data);

@@ -39,8 +39,8 @@
 */
 
 $route['news/(:any)'] = 'news/view/$1';
-$route['default_controller'] = 'welcome/under_constraction';
-//$route['default_controller'] = 'pages/view/semua';
+//$route['default_controller'] = 'welcome/under_constraction';
+$route['default_controller'] = 'pages/view/semua';
 $route['404_override'] = '';
 
 

@@ -103,14 +103,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <?php echo form_open('/pages/search') ?>
         <div class="dropdown-buttons">
           <div class="dropdown-button">
-            <select class="dropdown" tabindex="9" data-settings='{"wrapperClass":"flat"}' name="location">
+            <select class="dropdown" tabindex="9" data-settings='{"wrapperClass":"flat"}' name="pr_location">
               <option value="Lumajang">Lumajang</option>
               <option value="Probolinggo">Probolinggo</option>
               <option value="Jember">Jember</option>
             </select>
           </div>
           <div class="dropdown-button">
-            <select class="dropdown" tabindex="9" data-settings='{"wrapperClass":"flat"}' name="product_type">
+            <select class="dropdown" tabindex="9" data-settings='{"wrapperClass":"flat"}' name="pr_type">
               <option value="pertanian">Pertanian</option>	
               <option value="perternakan">Perternakan</option>
             </select>

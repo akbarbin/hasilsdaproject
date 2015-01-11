@@ -6,6 +6,7 @@ class Pages extends CI_Controller {
     parent::__construct();
     $this->load->model('agricultures_model');
     $this->load->model('subscribes_model');
+    $this->load->model('animal_farms_model');
   }
 
   public function view($page = 'home') {
@@ -19,7 +20,7 @@ class Pages extends CI_Controller {
     } else if ($page === 'pertanian') {
       $data['agricultures'] = $this->agricultures_model->get_all_agricultures();
     } else if ($page === 'perternakan') {
-      $data['animal_farms'] = $this->agricultures_model->get_all_animal_farms();
+      $data['animal_farms'] = $this->animal_farms_model->get_all_animal_farms();
     }
 
     $data['title'] = ucfirst($page); // Capitalize the first letter
@@ -33,9 +34,9 @@ class Pages extends CI_Controller {
     $data['title'] = "Semua"; // Capitalize the first letter
 
     if ($this->input->post('search') == '') {
-      $data['products'] = $this->agricultures_model->get_search();
+      $data['products'] = $this->agricultures_model->get_search_products();
     } else {
-      $data['products'] = $this->agricultures_model->get_search_icon();
+      $data['products'] = $this->agricultures_model->get_search_products_icon();
     }
     $this->load->view('templates/header', $data);
     $this->load->view('pages/semua', $data);
@@ -74,4 +75,7 @@ class Pages extends CI_Controller {
     }
   }
 
+  public function test_page() {
+    $this->agricultures_model->get_some_search_products();
+  }
 }

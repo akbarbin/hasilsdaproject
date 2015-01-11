@@ -1,30 +1,30 @@
 <?php
 
-class Users_model extends CI_Model {
+class Abouts_model extends CI_Model {
 
   public function __construct() {
     $this->load->database();
   }
 
   //select options * without conditions
-  public function get_options_users() {
+  public function get_options_abouts() {
     $this->db->select('*');
-    $this->db->from('users');
+    $this->db->from('abouts');
     $query = $this->db->get();
     return $query;
   }
 
-  public function get_all_users() {
+  public function get_all_abouts() {
     $this->db->select('*');
-    $this->db->from('users');
+    $this->db->from('abouts');
     $query = $this->db->get();
     return $query;
   }
 
-  //insert users
-  public function set_user() {
+  //insert abouts
+  public function set_about() {
     $data = array(
-        'usr_username' => $this->input->post('usr_username'),
+        'usr_aboutname' => $this->input->post('usr_aboutname'),
         'usr_address' => $this->input->post('usr_address'),
         'usr_no_telp' => $this->input->post('usr_no_telp'),
         'usr_status' => $this->input->post('usr_status'),
@@ -32,13 +32,13 @@ class Users_model extends CI_Model {
         'usr_created_at' => date("Y-m-d H:i:s"),
         'usr_updated_at' => date("Y-m-d H:i:s")
     );
-    return $this->db->insert('users', $data);
+    return $this->db->insert('abouts', $data);
   }
 
-  //u users
-  public function update_user($user_id) {
+  //u abouts
+  public function update_about($about_id) {
     $data = array(
-        'usr_username' => $this->input->post('usr_username'),
+        'usr_aboutname' => $this->input->post('usr_aboutname'),
         'usr_address' => $this->input->post('usr_address'),
         'usr_no_telp' => $this->input->post('usr_no_telp'),
         'usr_status' => $this->input->post('usr_status'),
@@ -46,14 +46,14 @@ class Users_model extends CI_Model {
         'usr_created_at' => date("Y-m-d H:i:s"),
         'usr_updated_at' => date("Y-m-d H:i:s")
     );
-    $this->db->where('usr_id', $user_id);
-    $this->db->update('users', $data);
+    $this->db->where('usr_id', $about_id);
+    $this->db->update('abouts', $data);
   }
 
-  //find user by usr_id
-  public function get_user($user_id) {
+  //find about by usr_id
+  public function get_about($about_id) {
     $this->db->select('*');
-    $query = $this->db->get_where('users', array('usr_id' => $user_id));
+    $query = $this->db->get_where('abouts', array('usr_id' => $about_id));
     return $query->row_array();
   }
 

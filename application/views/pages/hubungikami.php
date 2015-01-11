@@ -24,13 +24,13 @@
     <?php echo validation_errors(); ?>
     <?php echo form_open("pages/permintaan") ?>
       <div class="to">
-        <input type="text" name="name" class="text" value="<?php echo set_value('name'); ?>" placeholder="Nama">
-        <input type="text" name="email" class="text" value="<?php echo set_value('email'); ?>" placeholder="Alamat Email" style="margin-left:20px">
-        <input type="text" name="no_telp"class="text" value="<?php echo set_value('no_telp'); ?>" placeholder="No Telp" style="margin-left:20px">
+        <input type="text" name="req_name" class="text" value="<?php echo set_value('req_name'); ?>" placeholder="Nama">
+        <input type="text" name="req_email" class="text" value="<?php echo set_value('req_email'); ?>" placeholder="Alamat Email" style="margin-left:20px">
+        <input type="text" name="req_no_telp"class="text" value="<?php echo set_value('req_telp'); ?>" placeholder="No Telp" style="margin-left:20px">
         <div class="clearfix"></div>
       </div>
       <div class="text">
-        <textarea name="content" placeholder="Permintaan"><?php echo set_value('content'); ?></textarea>
+        <textarea name="req_content" placeholder="Permintaan"><?php echo set_value('req_content'); ?></textarea>
       </div>
       <div class="form-submit1">
         <input name="submit" type="submit" id="submit" value="Kirim permintaan">

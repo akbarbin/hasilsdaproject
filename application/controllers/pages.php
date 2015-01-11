@@ -6,6 +6,7 @@ class Pages extends CI_Controller {
     parent::__construct();
     $this->load->model('agricultures_model');
     $this->load->model('subscribes_model');
+    $this->load->model('animal_farms_model');
   }
 
   public function view($page = 'home') {
@@ -19,7 +20,7 @@ class Pages extends CI_Controller {
     } else if ($page === 'pertanian') {
       $data['agricultures'] = $this->agricultures_model->get_all_agricultures();
     } else if ($page === 'perternakan') {
-      $data['animal_farms'] = $this->agricultures_model->get_all_animal_farms();
+      $data['animal_farms'] = $this->animal_farms_model->get_all_animal_farms();
     }
 
     $data['title'] = ucfirst($page); // Capitalize the first letter

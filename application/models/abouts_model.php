@@ -24,13 +24,11 @@ class Abouts_model extends CI_Model {
   //insert abouts
   public function set_about() {
     $data = array(
-        'usr_aboutname' => $this->input->post('usr_aboutname'),
-        'usr_address' => $this->input->post('usr_address'),
-        'usr_no_telp' => $this->input->post('usr_no_telp'),
-        'usr_status' => $this->input->post('usr_status'),
-        'usr_type' => $this->input->post('usr_type'),
-        'usr_created_at' => date("Y-m-d H:i:s"),
-        'usr_updated_at' => date("Y-m-d H:i:s")
+        'abt_title' => $this->input->post('abt_title'),
+        'abt_description' => $this->input->post('abt_description'),
+        'abt_location' => $this->input->post('abt_location'),
+        'abt_created_at' => date("Y-m-d H:i:s"),
+        'abt_updated_at' => date("Y-m-d H:i:s")
     );
     return $this->db->insert('abouts', $data);
   }
@@ -38,22 +36,20 @@ class Abouts_model extends CI_Model {
   //u abouts
   public function update_about($about_id) {
     $data = array(
-        'usr_aboutname' => $this->input->post('usr_aboutname'),
-        'usr_address' => $this->input->post('usr_address'),
-        'usr_no_telp' => $this->input->post('usr_no_telp'),
-        'usr_status' => $this->input->post('usr_status'),
-        'usr_type' => $this->input->post('usr_type'),
-        'usr_created_at' => date("Y-m-d H:i:s"),
-        'usr_updated_at' => date("Y-m-d H:i:s")
+        'abt_title' => $this->input->post('abt_title'),
+        'abt_description' => $this->input->post('abt_description'),
+        'abt_location' => $this->input->post('abt_location'),
+        'abt_created_at' => date("Y-m-d H:i:s"),
+        'abt_updated_at' => date("Y-m-d H:i:s")
     );
-    $this->db->where('usr_id', $about_id);
+    $this->db->where('abt_id', $about_id);
     $this->db->update('abouts', $data);
   }
 
-  //find about by usr_id
+  //find about by abt_id
   public function get_about($about_id) {
     $this->db->select('*');
-    $query = $this->db->get_where('abouts', array('usr_id' => $about_id));
+    $query = $this->db->get_where('abouts', array('abt_id' => $about_id));
     return $query->row_array();
   }
 

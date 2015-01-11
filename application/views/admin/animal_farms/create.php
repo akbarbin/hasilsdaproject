@@ -31,7 +31,7 @@
       <div class="control-group">
         <label>Lokasi</label>
         <div class="controls">
-          <input type="text" value="<?php echo set_value('location'); ?>" name="pr_location" class="form-control" placeholder="Masukkan Lokasi">
+          <input type="text" value="<?php echo set_value('pr_location'); ?>" name="pr_location" class="form-control" placeholder="Masukkan Lokasi">
         </div>
       </div>
 

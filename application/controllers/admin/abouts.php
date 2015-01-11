@@ -9,22 +9,20 @@ class Abouts extends CI_Controller {
   }
 
   public function index() {
-    $data['abouts'] = '';#$this->abouts_model->get_all_abouts();
+    $data['abouts'] = $this->abouts_model->get_all_abouts();
     $this->load->view('templates/admin/header');
     $this->load->view('admin/abouts/index', $data);
     $this->load->view('templates/admin/footer');
   }
 
   public function create() {
-    $data['options_select'] = $this->abouts_model->options_select();
-    $this->form_validation->set_rules('usr_aboutname', 'Username', 'required');
-    $this->form_validation->set_rules('usr_address', 'Alamat', 'required');
-    $this->form_validation->set_rules('usr_no_telp', 'No Telp', 'numeric');
-    $this->form_validation->set_rules('usr_type', 'Tipe about', 'required');
+    $this->form_validation->set_rules('abt_title', 'Judul', 'required');
+    $this->form_validation->set_rules('abt_description', 'Deskripsi', 'required');
+    $this->form_validation->set_rules('abt_location', 'Lokasi', 'required');
 
     if ($this->form_validation->run() === FALSE) {
       $this->load->view('templates/admin/header');
-      $this->load->view('admin/abouts/create', $data);
+      $this->load->view('admin/abouts/create');
       $this->load->view('templates/admin/footer');
     } else {
       $this->abouts_model->set_about();
@@ -41,14 +39,11 @@ class Abouts extends CI_Controller {
 
   public function edit($about_id) {
     $data['about'] = $this->get_obj_about($about_id);
-    $data['options_select'] = $this->abouts_model->options_select();
-    $this->form_validation->set_rules('usr_aboutname', 'Username', 'required');
-    $this->form_validation->set_rules('usr_address', 'Alamat', 'required');
-    $this->form_validation->set_rules('usr_no_telp', 'No Telp', 'numeric');
-    $this->form_validation->set_rules('usr_type', 'Tipe about', 'required');
+    $this->form_validation->set_rules('abt_title', 'Judul', 'required');
+    $this->form_validation->set_rules('abt_description', 'Deskripsi', 'required');
+    $this->form_validation->set_rules('abt_location', 'Lokasi', 'required');
 
     if ($this->form_validation->run() === FALSE) {
-
       $this->load->view('templates/admin/header');
       $this->load->view('admin/abouts/edit', $data);
       $this->load->view('templates/admin/footer');
@@ -58,8 +53,8 @@ class Abouts extends CI_Controller {
     }
   }
 
-  public function destroy($usr_id) {
-    $this->db->delete('products', array('usr_id' => $usr_id));
+  public function destroy($abt_id) {
+    $this->db->delete('abouts', array('abt_id' => $abt_id));
     redirect('admin/abouts');
   }
 

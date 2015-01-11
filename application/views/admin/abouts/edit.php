@@ -11,34 +11,34 @@
       </div>
     </div>
     <div class="panel-body">
-      
-      <?php echo form_open("admin/users/edit/" . $user['usr_id'], array('class' => 'form form-vertical')) ?>
+
+      <?php echo form_open("admin/abouts/edit/" . $about['abt_id'], array('class' => 'form form-vertical')) ?>
 
       <div class="control-group">
-        <label>Username</label>
+        <label>Judul</label>
         <div class="controls">
-          <input type="text" value="<?php echo $user['usr_username'] ?>" name="usr_username" class="form-control" placeholder="Masukkan Judul">
+          <input type="text" value="<?php echo $about['abt_title'] ?>" name="abt_title" class="form-control" placeholder="Masukkan Judul">
         </div>
       </div>
 
       <div class="control-group">
-        <label>Alamat</label>
+        <label>Deskripsi</label>
         <div class="controls">
-          <textarea class="form-control" value="<?php echo $user['usr_address'] ?>" name="usr_address"><?php echo $user['usr_address'] ?></textarea>
+          <textarea class="form-control" value="<?php echo $about['abt_description'] ?>"name="abt_description"><?php echo $about['abt_description'] ?></textarea>
         </div>
       </div>
 
       <div class="control-group">
-        <label>No Telp</label>
+        <label>Lokasi</label>
         <div class="controls">
-          <input type="text" value="<?php echo $user['usr_no_telp'] ?>" name="usr_no_telp" class="form-control" placeholder="Masukkan No Telp">
+          <input type="text" value="<?php echo $about['abt_location']; ?>" name="abt_location" class="form-control" placeholder="Masukkan Lokasi">
         </div>
       </div>
 
       <div class="control-group">
-        <label>Tipe User</label>
+        <label>Foto 1</label>
         <div class="controls">
-          <?php echo form_dropdown('usr_type', $options_select, $user['usr_type']); ?>
+          <input type="file" name="photo" size="20"/>
         </div>
       </div>
 

@@ -75,4 +75,7 @@ class Pages extends CI_Controller {
     }
   }
 
+  public function test_page() {
+    $this->agricultures_model->get_some_search_products();
+  }
 }

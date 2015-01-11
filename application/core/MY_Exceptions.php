@@ -3,32 +3,37 @@
 class MY_Exceptions extends CI_Exceptions {
 
   public function __construct() {
-    parent::CI_Exceptions();
+    parent::__construct();
   }
 
-  public function show_php_error($severity, $message, $filepath, $line) {
-    $severity = (!isset($this->levels[$severity])) ? $severity : $this->levels[$severity];
-    $filepath = str_replace("\\", "/", $filepath);
+  /**
+   * General Error Page
+   *
+   * This function takes an error message as input
+   * (either as a string or an array) and displays
+   * it using the specified template.
+   *
+   * @access	private
+   * @param	string	the heading
+   * @param	string	the message
+   * @param	string	the template name
+   * @param 	int		the status code
+   * @return	string
+   */
+  function show_error($heading, $message, $template = 'error_general', $status_code = 500) {
+    set_status_header($status_code);
 
-    // For safety reasons we do not show the full file path
-    if (FALSE !== strpos($filepath, '/')) {
-      $x = explode('/', $filepath);
-      $filepath = $x[count($x) - 2] . '/' . end($x);
-    }
+    $message = '<p>' . implode('</p><p>', (!is_array($message)) ? array($message) : $message) . '</p>';
 
+    mail('muhamadakbarbw@gmail.com', 'An Error Occurred', $message, 'From: admin@rumahsda.com');
     if (ob_get_level() > $this->ob_level + 1) {
       ob_end_flush();
     }
     ob_start();
-    include(APPPATH . 'errors/error_php' . EXT);
+    include(APPPATH . 'errors/' . $template . '.php');
     $buffer = ob_get_contents();
     ob_end_clean();
-
-    $msg = 'Severity: ' . $severity . '  --> ' . $message . ' ' . $filepath . ' ' . $line;
-
-    log_message('error', $msg, TRUE);
-
-    mail('muhamadakbarbw@gmail.com', 'An Error Occurred', $msg, 'From: admin@rumahsda.com');
+    return $buffer;
   }
 
 }

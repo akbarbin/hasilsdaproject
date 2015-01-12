@@ -3,7 +3,7 @@
     <h1>Hubungi Kami</h1>
     <div class="col-md-9 wow fadeInLeft" data-wow-delay="0.4s">
       <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3150859.767904157!2d-96.62081048651531!3d39.536794757966845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1408111832978"> </iframe>
+        <iframe src="https://mapsengine.google.com/map/u/0/embed?mid=zIctX_bCgox8.kAdqIDIyzNVg" width="825" height="300"></iframe>
       </div>
     </div>
     <div class="col-md-3 wow fadeInRight" data-wow-delay="0.4s">
@@ -12,7 +12,7 @@
         <dl>
           <dt></dt>
           <dd>Telephone:<span> +62 856 2471 0902</span></dd>
-          <dd>E-mail:&nbsp; <a href="mailto@example.com">muhamadakbarbw@gmail.com</a></dd>
+          <dd>E-mail:<span> support@rumahsda.com</span></dd>
         </dl>
       </address>
     </div>
@@ -23,20 +23,19 @@
     <h2>Permintaan</h2>
     <?php echo validation_errors(); ?>
     <?php echo form_open("pages/permintaan") ?>
-      <div class="to">
-        <input type="text" name="req_name" class="text" value="<?php echo set_value('req_name'); ?>" placeholder="Nama">
-        <input type="text" name="req_email" class="text" value="<?php echo set_value('req_email'); ?>" placeholder="Alamat Email" style="margin-left:20px">
-        <input type="text" name="req_no_telp"class="text" value="<?php echo set_value('req_telp'); ?>" placeholder="No Telp" style="margin-left:20px">
-        <div class="clearfix"></div>
-      </div>
-      <div class="text">
-        <textarea name="req_content" placeholder="Permintaan"><?php echo set_value('req_content'); ?></textarea>
-      </div>
-      <div class="form-submit1">
-        <input name="submit" type="submit" id="submit" value="Kirim permintaan">
-
-      </div>
+    <div class="to">
+      <input type="text" name="req_name" class="text" value="<?php echo set_value('req_name'); ?>" placeholder="Nama">
+      <input type="text" name="req_email" class="text" value="<?php echo set_value('req_email'); ?>" placeholder="Alamat Email" style="margin-left:20px">
+      <input type="text" name="req_no_telp"class="text" value="<?php echo set_value('req_telp'); ?>" placeholder="No Telp" style="margin-left:20px">
       <div class="clearfix"></div>
+    </div>
+    <div class="text">
+      <textarea name="req_content" placeholder="Permintaan"><?php echo set_value('req_content'); ?></textarea>
+    </div>
+    <div class="form-submit1">
+      <input name="submit" type="submit" id="submit" value="Kirim permintaan">
+    </div>
+    <div class="clearfix"></div>
     </form>
   </div>	  
 </div>

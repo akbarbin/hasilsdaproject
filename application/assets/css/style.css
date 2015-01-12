@@ -14,7 +14,7 @@ html, body{
    background:#fff; 
 }
 body a{
-	transition:0.5s all;
+	transitio28n:0.5s all;
 	-webkit-transition:0.5s all;
 	-moz-transition:0.5s all;
 	-o-transition:0.5s all;
@@ -1533,7 +1533,7 @@ ul.service_grid li.desc1 p{
 	outline: none;
 	border: none;
 	margin: 0px auto;
-	width: 68%;
+	width: 64%;
 	-webkit-apperance: none;
 	vertical-align: middle;
 }

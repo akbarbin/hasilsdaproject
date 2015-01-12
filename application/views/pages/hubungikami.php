@@ -12,7 +12,7 @@
         <dl>
           <dt></dt>
           <dd>Telephone:<span> +62 856 2471 0902</span></dd>
-          <dd>E-mail:&nbsp; <a href="mailto@example.com">muhamadakbarbw@gmail.com</a></dd>
+          <dd>E-mail:<span> support@rumahsda.com</span></dd>
         </dl>
       </address>
     </div>

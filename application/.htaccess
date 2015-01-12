@@ -1,2 +1,1 @@
-RewriteCond $1 !^(index\.php|application\/assets\*)
-RewriteRule ^(.*)$ index.php/$1 [L]
+Allow from all

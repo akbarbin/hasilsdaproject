@@ -49,8 +49,8 @@
     <div class="col-md-8 wow fadeInRight" data-wow-delay="0.4s">
       <div class="educate_grid">
         <div class="col-md-6">
-          <div class="living_box grid_box"><a href="<?php echo base_url(); ?>assets/images/e1.jpg" class="swipebox"  title="Image Title">
-              <img src="<?php echo base_url(); ?>assets/images/e1.jpg" class="img-responsive" alt=""/><span class="zoom-icon"></span>
+          <div class="living_box grid_box"><a href="<?php echo base_url(); ?>/application/assets/images/e1.jpg" class="swipebox"  title="Image Title">
+              <img src="<?php echo base_url(); ?>/application/assets/images/e1.jpg" class="img-responsive" alt=""/><span class="zoom-icon"></span>
               <span class="sale-box">
                 <span class="sale-label">Lumajang</span>
               </span>
@@ -63,8 +63,8 @@
           </div>
         </div>
         <div class="col-md-6">
-          <div class="living_box grid_box"><a href="<?php echo base_url(); ?>assets/images/e2.jpg" class="swipebox"  title="Image Title">
-              <img src="<?php echo base_url(); ?>assets/images/e2.jpg" class="img-responsive" alt=""/><span class="zoom-icon"></span>
+          <div class="living_box grid_box"><a href="<?php echo base_url(); ?>/application/assets/images/e2.jpg" class="swipebox"  title="Image Title">
+              <img src="<?php echo base_url(); ?>/application/assets/images/e2.jpg" class="img-responsive" alt=""/><span class="zoom-icon"></span>
               <span class="sale-box">
                 <span class="sale-label">Lumajang</span>
               </span>
@@ -77,8 +77,8 @@
           </div>
         </div>
         <div class="col-md-6">
-          <div class="living_box grid_box"><a href="<?php echo base_url(); ?>assets/images/e3.jpg" class="swipebox"  title="Image Title">
-              <img src="<?php echo base_url(); ?>assets/images/e3.jpg" class="img-responsive" alt=""/><span class="zoom-icon"></span>
+          <div class="living_box grid_box"><a href="<?php echo base_url(); ?>/application/assets/images/e3.jpg" class="swipebox"  title="Image Title">
+              <img src="<?php echo base_url(); ?>/application/assets/images/e3.jpg" class="img-responsive" alt=""/><span class="zoom-icon"></span>
               <span class="sale-box">
                 <span class="sale-label">Lumajang</span>
               </span>
@@ -91,8 +91,8 @@
           </div>
         </div>
         <div class="col-md-6">
-          <div class="living_box grid_box"><a href="<?php echo base_url(); ?>assets/images/e4.jpg" class="swipebox"  title="Image Title">
-              <img src="<?php echo base_url(); ?>assets/images/e4.jpg" class="img-responsive" alt=""/><span class="zoom-icon"></span>
+          <div class="living_box grid_box"><a href="<?php echo base_url(); ?>/application/assets/images/e4.jpg" class="swipebox"  title="Image Title">
+              <img src="<?php echo base_url(); ?>/application/assets/images/e4.jpg" class="img-responsive" alt=""/><span class="zoom-icon"></span>
               <span class="sale-box">
                 <span class="sale-label">Lumajang</span>
               </span>

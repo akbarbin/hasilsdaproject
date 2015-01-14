@@ -61,6 +61,7 @@
         <label>Peternak/Petani</label>
         <div class="controls">
           <select class="form-control" name="pr_user_id">
+            <option value="">Pilih Petani/Peternak</option>
             <?php foreach ($option_users->result_array() as $option_user_item): ?>
               <option value="<?php echo $option_user_item['usr_id'] ?>" <?php echo ($option_user_item['usr_id'] == $agriculture['pr_user_id']) ? "selected" : "" ?>><?php echo $option_user_item['usr_username'] ?></option>
             <?php endforeach; ?>

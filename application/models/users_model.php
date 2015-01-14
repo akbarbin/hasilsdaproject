@@ -59,6 +59,7 @@ class Users_model extends CI_Model {
 
   public function options_select() {
     $options = array(
+        '' => 'Pilih tipe user',
         'admin' => 'Admin',
         'petani' => 'Petani',
         'peternak' => 'Peternak'

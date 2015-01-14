@@ -6,7 +6,11 @@
           <div class="col-md-3">
             <div class="grid1">
               <div class="view view-first">
-                <div class="index_img"><img src="<?php echo base_url() . $products_item['pr_photo_2']; ?> " class="img-responsive" alt=""/></div>
+                <?php if (is_file($products_item['pr_photo_2'])): ?>
+                  <div class="index_img"><img src="<?php echo base_url() . $products_item['pr_photo_2']; ?> " class="img-responsive" alt="<?php echo $products_item['pr_title'] ?>"/></div>
+                <?php else : ?>
+                  <div class="index_img"><img src="<?php echo base_url() . "application/assets/images/default_img.png" ?> " class="img-responsive" alt="default image"/></div>
+                <?php endif; ?>
                 <div class="sale"><?php echo $products_item['pr_location'] ?></div>
                 <div class="mask">
                   <div class="info"><i class="search"> </i> Tengok</div>

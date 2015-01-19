@@ -22,6 +22,20 @@
       </div>
 
       <div class="control-group">
+        <label>Password</label>
+        <div class="controls">
+          <input type="password" value="<?php echo set_value('usr_password'); ?>" name="usr_password" class="form-control" placeholder="Masukkan Password">
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label>Password Konfirmasi</label>
+        <div class="controls">
+          <input type="password" value="<?php echo set_value('usr_password_confirmation'); ?>" name="usr_password_confirmation" class="form-control" placeholder="Masukkan Password Konfirmasi">
+        </div>
+      </div>
+
+      <div class="control-group">
         <label>Alamat</label>
         <div class="controls">
           <textarea class="form-control" value="<?php echo set_value('usr_address'); ?> "name="usr_address"></textarea>

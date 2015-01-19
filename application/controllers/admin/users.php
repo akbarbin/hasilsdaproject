@@ -19,6 +19,8 @@ class Users extends CI_Controller {
     $data['options_select'] = $this->users_model->options_select();
     $this->form_validation->set_rules('usr_username', 'Username', 'required');
     $this->form_validation->set_rules('usr_address', 'Alamat', 'required');
+    $this->form_validation->set_rules('usr_password', 'Password', 'trim|required|xss_clean|matches[usr_password_confirmation]|md5');
+    $this->form_validation->set_rules('usr_password_confirmation', 'Password Confirmation', 'required|md5');
     $this->form_validation->set_rules('usr_no_telp', 'No Telp', 'numeric');
     $this->form_validation->set_rules('usr_type', 'Tipe user', 'required');
 
@@ -43,6 +45,8 @@ class Users extends CI_Controller {
     $data['user'] = $this->get_obj_user($user_id);
     $data['options_select'] = $this->users_model->options_select();
     $this->form_validation->set_rules('usr_username', 'Username', 'required');
+    $this->form_validation->set_rules('usr_password', 'Password', 'trim|required|xss_clean|matches[usr_password_confirmation]|md5');
+    $this->form_validation->set_rules('usr_password_confirmation', 'Password Confirmation', 'required|md5');
     $this->form_validation->set_rules('usr_address', 'Alamat', 'required');
     $this->form_validation->set_rules('usr_no_telp', 'No Telp', 'numeric');
     $this->form_validation->set_rules('usr_type', 'Tipe user', 'required');

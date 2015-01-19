@@ -4,7 +4,7 @@ This README would normally document whatever steps are necessary to get your app
 
 ### What is this repository for? ###
 
-* Quick summary Konsultan Berdagang Anda
+* Quick summary Website Konsultan Berdagang Anda
 * Version V1
 * [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
 

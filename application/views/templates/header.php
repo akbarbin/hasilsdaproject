@@ -12,6 +12,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <!-- Custom Theme files -->
     <link href="<?php echo base_url(); ?>/application/assets/css/style.css" rel='stylesheet' type='text/css' />
+    <link href="<?php echo base_url(); ?>/application/assets/css/font-awesome.css" rel='stylesheet' type='text/css' />
 
     <!-- Custom Theme files -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -88,7 +89,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
               <input type="submit" id="login" value="Masuk">
               <label for="checkbox"><input type="checkbox" id="checkbox"> <i>Ingatkan saya</i></label>
             </fieldset>
-            <span><a href="#">Lupa kata sandi?</a></span>
+            <span><a href="<?php echo site_url(); ?>/pages/daftar">Daftar</a> | <a href="#">Lupa kata sandi?</a></span>
             </form>
           </div>
         </div>

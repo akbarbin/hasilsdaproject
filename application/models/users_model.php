@@ -1,6 +1,9 @@
 <?php
 
-class Users_model extends CI_Model {
+class Users_model extends Application_Model {
+
+  private $tbl_users = 'users';
+  private $tbl_prefix = 'usr_';
 
   public function __construct() {
     $this->load->database();
@@ -21,33 +24,19 @@ class Users_model extends CI_Model {
     return $query;
   }
 
-  //insert users
-  public function set_user() {
-    $data = array(
-        'usr_username' => $this->input->post('usr_username'),
-        'usr_address' => $this->input->post('usr_address'),
-        'usr_no_telp' => $this->input->post('usr_no_telp'),
-        'usr_status' => $this->input->post('usr_status'),
-        'usr_type' => $this->input->post('usr_type'),
-        'usr_created_at' => date("Y-m-d H:i:s"),
-        'usr_updated_at' => date("Y-m-d H:i:s")
-    );
-    return $this->db->insert('users', $data);
-  }
+  public function save($data = array(), $id = NULL, $primary_key = 'usr_id') {
+    $data = $this->unset_params_before_save($data, array('usr_password_confirmation', 'agreement', 'submit'));
+    if (empty($id)) {
+      $insert = $this->set_before_insert($data, $this->tbl_prefix);
 
-  //u users
-  public function update_user($user_id) {
-    $data = array(
-        'usr_username' => $this->input->post('usr_username'),
-        'usr_address' => $this->input->post('usr_address'),
-        'usr_no_telp' => $this->input->post('usr_no_telp'),
-        'usr_status' => $this->input->post('usr_status'),
-        'usr_type' => $this->input->post('usr_type'),
-        'usr_created_at' => date("Y-m-d H:i:s"),
-        'usr_updated_at' => date("Y-m-d H:i:s")
-    );
-    $this->db->where('usr_id', $user_id);
-    $this->db->update('users', $data);
+      $this->db->insert($this->tbl_users, $insert);
+      return $insert;
+    } else {
+      $this->db->where($primary_key, $id);
+      $update = $this->set_before_update($data, $this->tbl_prefix);
+
+      return $this->db->update($this->tbl_users, $update);
+    }
   }
 
   //find user by usr_id

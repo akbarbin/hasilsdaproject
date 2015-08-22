@@ -86,4 +86,14 @@ class Agricultures_model extends CI_Model {
     return $query->row_array();
   }
 
+  //find product by pr_id
+  public function get_product($product_id) {
+    $this->db->select(
+            'pr_id, pr_title, pr_description, pr_location, pr_photo, pr_user_id, usr_username'
+    );
+    $this->db->join('users', 'users.usr_id = products.pr_user_id');
+    $query = $this->db->get_where('products', array('pr_id' => $product_id));
+    return $query->row_array();
+  }
+
 }

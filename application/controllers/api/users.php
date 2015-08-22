@@ -1,34 +1,37 @@
 <?php
 
-if (!defined('BASEPATH'))
-    exit('No direct script access allowed');
+class Users extends CI_Controller {
 
-class VerifyLogin extends CI_Controller {
-
-    function __construct() {
+    public function __construct() {
         parent::__construct();
-        $this->load->model('user', '', TRUE);
+        $this->load->model('users_model');
     }
 
-    function index() {
+    public function index() {
+        $data['users'] = $this->users_model->get_all_users();
+        header('Content-Type: application/json');
+        echo json_encode($data['users']->result_array());
+    }
+
+    public function sign_in() {
         //This method will have the credentials validation
         $this->load->library('form_validation');
 
         $this->form_validation->set_rules('username', 'Username', 'trim|required|xss_clean');
-        $this->form_validation->set_rules('password', 'Password', 'trim|required|xss_clean|callback_check_database');
+        $this->form_validation->set_rules('password', 'Password', 'trim|required|xss_clean|call_');
 
         if ($this->form_validation->run() == FALSE) {
-            //Field validation failed.  User redirected to login page
-            $this->load->view('templates/header');
-            $this->load->view('login_view');
-            $this->load->view('templates/footer');
+            header('Content-Type: application/json');
+            echo json_encode(array('message' => 'failed', 'error' => 'aaa'));
         } else {
-            if (current_user()->usr_type != "admin") {
-                redirect('users/dashboards/index');
-            } else {
-                redirect('admin/dashboards/index');
-            }
+            header('Content-Type: application/json');
+            echo json_encode(array('message' => 'success'));
         }
+    }
+
+    public function create() {
+        $this->users_model->save($this->input->get());
+        echo json_encode(array('message' => 'success'));
     }
 
     function check_database($password) {

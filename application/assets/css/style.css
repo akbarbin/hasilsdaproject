@@ -1043,6 +1043,10 @@ ul.mask_img li.star span{
 ul.mask_img li.set{
 	float:left;
 }
+a.info:hover {
+        text-decoration: none; 
+}
+
 .info {
     display: inline-block;
 	text-decoration: none;
@@ -1905,7 +1909,7 @@ p.educate {
 	padding:5em 0;
 	border-top:1px solid #f0f0f0;
 }
-.contact h1{
+h1.heading {
 	text-align: center;
 	font-size: 1.5em;
 	text-transform: uppercase;
@@ -1996,6 +2000,13 @@ p.educate {
 	margin-bottom: 2em;
 }
 /*--responsive design--*/
+
+/*--register--*/
+.register{
+	padding:5em 0;
+	border-top:1px solid #f0f0f0;
+}
+
 @media (max-width:1366px){
 .header {
 	margin-left: 8em;
@@ -2480,3 +2491,136 @@ label.btn1.btn2.btn-2.btn-2g {
 	min-height: 200px;
 }
 }
+
+
+/*-- Detail Post --*/
+.project-details ul {
+    padding: 0;
+    margin: 0;
+}
+
+.project-details ul li {
+    list-style: none;
+    border-bottom: 1px dotted #dadada;
+    padding-bottom: 5px;
+    margin-top: 10px;
+}
+
+.project-details ul li span {
+    font-weight: 700;
+    margin-right: 5px;
+}
+
+.btn-content-footer {
+  text-align: left;
+  padding-top: 20px;
+}
+
+.btn-orange {
+  color: #fff;
+  background-color: #e94e38;
+  border-color: #e94e38;
+}
+
+/*-- End Single Post --*/
+
+/*-- Side Bar --*/
+
+.side-bar h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #f78e21;
+  margin-top: 0px;
+  padding: 9px 15px 9px 15px;
+}
+
+.archives-list ul {
+  margin-top: 25px !important;
+  padding-bottom: 30px !important;
+  margin: 0;
+  padding: 0;
+}
+
+.archives-list li {
+  list-style: none;
+  margin: 10px 0;
+}
+
+.archives-list i {
+  font-size: 16px;
+  margin-right: 5px;
+  color: #f78e21;
+}
+
+.archives-list a {
+  text-transform: uppercase;
+  color: #888;
+  font-size: 13px;
+}
+
+.archives-list a:hover {
+  color: #f78e21;
+}
+
+.recent-post {
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.recent-post-thumb {
+  float: left;
+  margin-right: 20px !important; 
+  width: 70px;
+  height: 70px;
+}
+
+.recent-post-info {
+  overflow: hidden;
+}
+
+.recent-post-info h6 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+
+.posts {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.recent-post-info a {
+  color: #333;
+}
+
+.recent-post-info a:hover {
+  color: #f78e21;
+}
+
+.recent-post-info span {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  color: #f78e21;
+}
+
+.flickr-images {
+  margin-top: 20px;
+}
+
+.flickr-images img {
+  margin-top: 20px;
+  overflow: hidden !important;
+  width: 68px;
+}
+
+.flickr-images img:hover {
+  border: 3px solid #f78e21;
+  transition: all 0.1s ease-in;
+  cursor: pointer;
+}
+
+/*-- End Side Bar --*/

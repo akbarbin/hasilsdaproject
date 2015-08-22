@@ -1,6 +1,6 @@
 <div class="contact">
   <div class="container">
-    <h1>Hubungi Kami</h1>
+    <h1 class="heading">Hubungi Kami</h1>
     <div class="col-md-9 wow fadeInLeft" data-wow-delay="0.4s">
       <div class="map">
         <iframe src="https://mapsengine.google.com/map/u/0/embed?mid=zIctX_bCgox8.kAdqIDIyzNVg" width="825" height="300"></iframe>

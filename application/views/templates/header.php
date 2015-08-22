@@ -12,6 +12,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <!-- Custom Theme files -->
     <link href="<?php echo base_url(); ?>/application/assets/css/style.css" rel='stylesheet' type='text/css' />
+    <link href="<?php echo base_url(); ?>/application/assets/css/font-awesome.css" rel='stylesheet' type='text/css' />
 
     <!-- Custom Theme files -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -49,7 +50,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <li class="<?= ($this->router->fetch_class() == "pages" and $title == "Semua") ? "active" : "" ?>"><a href="<?php echo base_url(); ?>index.php/pages/view/semua">Semua</a></li>
             <li class="<?= ($this->router->fetch_class() == "pages" and $title == "Pertanian") ? "active" : "" ?>"><a href="<?php echo base_url(); ?>index.php/pages/view/pertanian">Pertanian</a></li>
             <li class="<?= ($this->router->fetch_class() == "pages" and $title == "Perternakan") ? "active" : "" ?>"><a href="<?php echo base_url(); ?>index.php/pages/view/perternakan">Perternakan</a></li>
-            <li class="<?= ($this->router->fetch_class() == "pages" and $title == "Tentangkami") ? "active" : "" ?>"><a href="<?php echo base_url(); ?>index.php/pages/view/tentangkami">Tentang Rsda</a></li>
+            <li class="<?= ($this->router->fetch_class() == "pages" and $title == "Tentangkami") ? "active" : "" ?>"><a href="<?php echo base_url(); ?>index.php/pages/view/tentangkami">Tentang</a></li>
+            <li class="<?= ($this->router->fetch_class() == "pages" and $title == "Perternakan") ? "active" : "" ?>"><a href="<?php echo base_url(); ?>index.php/pages/view/hubungikami">Kontak</a></li>
             <div class="clearfix"></div>
           </ul>
           <script type="text/javascript" src="<?php echo base_url(); ?>/application/assets/js/responsive-nav.js"></script>
@@ -89,7 +91,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
               <input type="submit" id="login" value="Masuk">
               <label for="checkbox"><input type="checkbox" id="checkbox"> <i>Ingatkan saya</i></label>
             </fieldset>
-            <span><a href="#">Lupa kata sandi?</a></span>
+            <span><a href="<?php echo site_url(); ?>/pages/daftar">Daftar</a> | <a href="#">Lupa kata sandi?</a></span>
             </form>
           </div>
         </div>

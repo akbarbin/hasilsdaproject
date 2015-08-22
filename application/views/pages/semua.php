@@ -13,7 +13,7 @@
                 <?php endif; ?>
                 <div class="sale"><?php echo $products_item['pr_location'] ?></div>
                 <div class="mask">
-                  <div class="info"><i class="search"> </i> Tengok</div>
+                  <a href="<?php echo base_url() . "index.php/pages/rincian_produk/" . $products_item['pr_id']; ?>" class="info"><i class="search"> </i> Tengok</a>
                   <ul class="mask_img">
                     <li class="star"><span>+62 856 2471 0902</span></li>
                     <div class="clearfix"> </div>

@@ -31,7 +31,7 @@
         </div>
         <div class="form-group">
           <label for="exampleInputAddress">Alamat *</label>
-            <textarea class="form-control" value="<?php echo set_value('usr_address'); ?>" name="usr_address" placeholder="Masukkan alamat lengkap"><?php echo set_value('usr_address'); ?></textarea>
+          <textarea class="form-control" value="<?php echo set_value('usr_address'); ?>" name="usr_address" placeholder="Masukkan alamat lengkap"><?php echo set_value('usr_address'); ?></textarea>
           <p class="help-block">Alamat diisi dengan jalan, dusun, desa, rt/rw, kecamatan, kabupaten, provinsi, kode pos</p>
         </div>
         <div class="form-group">

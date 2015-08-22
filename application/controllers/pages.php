@@ -80,13 +80,13 @@ class Pages extends CI_Controller {
     $data['options_select'] = $this->users_model->options_select();
 
     $this->form_validation->set_rules('name', 'Nama', 'required');
-    $this->form_validation->set_rules('usr_username', 'Username', 'required|is_unique[users.username]');
-    $this->form_validation->set_rules('usr_username', 'Email', 'is_unique[users.email]');
-    $this->form_validation->set_rules('usr_address', 'Alamat', 'required');
+    $this->form_validation->set_rules('usr_username', 'Username', 'required|is_unique[users.usr_username]');
+    $this->form_validation->set_rules('email', 'Email', 'is_unique[users.email]');
+    $this->form_validation->set_rules('usr_type', 'Tipe user', 'required');
     $this->form_validation->set_rules('usr_password', 'Password', 'trim|required|xss_clean|min_length[5]|matches[usr_password_confirmation]|md5');
     $this->form_validation->set_rules('usr_password_confirmation', 'Password Confirmation', 'required|min_length[5]|md5');
-    $this->form_validation->set_rules('usr_no_telp', 'No Telp', 'numeric|max_length[15]');
-    $this->form_validation->set_rules('usr_type', 'Tipe user', 'required');
+    $this->form_validation->set_rules('usr_address', 'Alamat', 'required');
+    $this->form_validation->set_rules('usr_no_telp', 'No Telp', 'required|numeric|max_length[15]');
     $this->form_validation->set_rules('agreement', 'Persetujuan', 'required');
 
     if ($this->form_validation->run() === FALSE) {

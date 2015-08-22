@@ -127,5 +127,4 @@ class Application_Controller extends CI_Controller {
         }
         return $list;
     }
-
 }

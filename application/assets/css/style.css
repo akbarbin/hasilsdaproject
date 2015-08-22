@@ -1043,6 +1043,10 @@ ul.mask_img li.star span{
 ul.mask_img li.set{
 	float:left;
 }
+a.info:hover {
+        text-decoration: none; 
+}
+
 .info {
     display: inline-block;
 	text-decoration: none;
@@ -2489,147 +2493,33 @@ label.btn1.btn2.btn-2.btn-2g {
 }
 
 
-/*-- Single Post --*/
-
-.image-post {
-  overflow: hidden;
+/*-- Detail Post --*/
+.project-details ul {
+    padding: 0;
+    margin: 0;
 }
 
-.product-title {
-  margin-top: 20px;
+.project-details ul li {
+    list-style: none;
+    border-bottom: 1px dotted #dadada;
+    padding-bottom: 5px;
+    margin-top: 10px;
 }
 
-.product-title h3 {
-  font-size: 16px;
-  font-weight: 700;
-  color: #333;
-  display: inline-block;
+.project-details ul li span {
+    font-weight: 700;
+    margin-right: 5px;
 }
 
-.product-title span {
-  display: inline-block;
-  font-size: 13px;
-  color: #f78e21;
-} 
-
-.product-title h3.product-border, .product-title span.product-border {
-  margin-right: 20px;
-  border-right: 1px solid #ddd;
-  padding-right: 20px;
+.btn-content-footer {
+  text-align: left;
+  padding-top: 20px;
 }
 
-.product-content a {
-  font-weight: 700;
-  font-size: 13px;
-  color: #f78e21;
-}
-
-.product-content p {
-  margin-top: 5px;
-  padding-bottom: 15px;
-}
-
-.comment-section h4 {
-  margin-top: 30px;
-  font-size: 16px;
-  color: #666;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.all-comments {
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-
-.comments {
-  margin-top: 30px;
-}
-
-.author-thumb {
-  float: left;
-  margin-right: 30px;
-}
-
-.comment-body {
-  padding: 20px;
-  overflow: hidden;
-  position: relative;
-}
-
-.comment-body h6 {
-  font-size: 16px;
-  font-weight: 700;
-  color: #333;
-  text-transform: uppercase;
-  margin-bottom: 5px;
-  margin-top: 0px;
-}
-
-.comment-body span {
-  font-size: 14px;
-  color: #f78e21;
-}
-
-.comment-body p {
-  margin-top: 20px;
-}
-
-.comment-body a {
-  text-transform: uppercase;
-  font-size: 14px;
+.btn-orange {
   color: #fff;
-  background-color: #f78e21;
-  width: 80px;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
-  display: inline-block;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-}
-
-.replyed-form {
-  margin-left: 130px;
-}
-
-.leave-comment h4 {
-  margin-top: 30px;
-  padding-bottom: 10px;
-  font-size: 16px;
-  color: #666;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-form.leave-comment input {
-  padding: 10px;
-  border: 1px solid #e2e2e2;
-  width: 100%;
-  margin-top: 25px;
-  font-size: 13px;
-  font-style: italic;
-  font-weight: 300;
-  color: #aaa;
-  outline: none; 
-}
-
-.send button {
-  width: 90px;
-  color: #fff;
-  cursor: pointer;
-  height: 35px;
-  line-height: 30px;
-  text-align: center;
-  background-color: #f78e21; 
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  text-transform: uppercase;
-  border: 0;
-  outline: none;
+  background-color: #e94e38;
+  border-color: #e94e38;
 }
 
 /*-- End Single Post --*/

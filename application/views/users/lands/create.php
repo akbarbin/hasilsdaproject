@@ -21,7 +21,7 @@
                 <div class="control-group">
                     <label>Luas</label>
                     <div class="controls">
-                        <input type="text" value="<?php echo set_value('la_wide_land'); ?>" name="la_title" class="form-control" placeholder="Masukkan Luas Tanah">
+                        <input type="text" value="<?php echo set_value('la_wide_land'); ?>" name="la_wide_land" class="form-control" placeholder="Masukkan Luas Tanah">
                     </div>
                 </div>
 
@@ -29,6 +29,7 @@
                     <label>Lokasi</label>
                     <div class="controls">
                         <input type="text" value="<?php echo set_value('la_location'); ?>" name="la_location" class="form-control" placeholder="Masukkan Lokasi">
+                        <input type="hidden" value="<?php echo set_value('la_user_id', current_user()->usr_id); ?>" name="la_user_id" class="form-control">
                     </div>
                 </div>
 

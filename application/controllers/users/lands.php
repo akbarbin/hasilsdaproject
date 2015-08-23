@@ -6,7 +6,7 @@ class Lands extends CI_Controller {
     parent::__construct();
     $this->_before_filter();
     $this->load->model('lands_model');
-    $this->load->model('users_model');
+    $this->load->model('lands_model');
   }
 
   public function index() {
@@ -17,15 +17,14 @@ class Lands extends CI_Controller {
   }
 
   public function create() {
-    $data['option_users'] = $this->users_model->get_options_users();
     $this->form_validation->set_rules('la_title', 'Name', 'required');
+    $this->form_validation->set_rules('la_wide_land', 'Luas', 'required');
     $this->form_validation->set_rules('la_location', 'Lokasi', 'required');
-    $this->form_validation->set_rules('la_type', 'Kategori', 'required');
-    $this->form_validation->set_rules('la_user_id', 'Petani/Peternak', 'required');
+    $this->form_validation->set_rules('la_user_id', 'la_user_id', 'required');
 
     if ($this->form_validation->run() === FALSE) {
       $this->load->view('templates/users/header');
-      $this->load->view('users/lands/create', $data);
+      $this->load->view('users/lands/create');
       $this->load->view('templates/users/footer');
     } else {
       $this->lands_model->set_land();
@@ -42,15 +41,12 @@ class Lands extends CI_Controller {
 
   public function edit($land_id) {
     $data['land'] = $this->get_obj_land($land_id);
-    $data['option_users'] = $this->users_model->get_options_users();
-    $this->form_validation->set_rules('la_title', 'Judul', 'required');
-    $this->form_validation->set_rules('la_description', 'Deskripsi', 'required');
+    $this->form_validation->set_rules('la_title', 'Name', 'required');
+    $this->form_validation->set_rules('la_wide_land', 'Luas', 'required');
     $this->form_validation->set_rules('la_location', 'Lokasi', 'required');
-    $this->form_validation->set_rules('la_type', 'Kategori', 'required');
-    $this->form_validation->set_rules('la_user_id', 'Petani/Peternak', 'required');
+    $this->form_validation->set_rules('la_user_id', 'la_user_id', 'required');
 
     if ($this->form_validation->run() === FALSE) {
-
       $this->load->view('templates/users/header');
       $this->load->view('users/lands/edit', $data);
       $this->load->view('templates/users/footer');
@@ -61,7 +57,7 @@ class Lands extends CI_Controller {
   }
 
   public function destroy($la_id) {
-    $this->db->delete('products', array('la_id' => $la_id));
+    $this->db->delete('lands', array('la_id' => $la_id));
     redirect('users/lands');
   }
 

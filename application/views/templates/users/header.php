@@ -18,7 +18,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
         <!--webfont-->
-        <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+        <!--<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>-->
         <script type="text/javascript" src="<?php echo base_url(); ?>/application/assets/js/jquery-1.11.1.min.js"></script>
         <script type="text/javascript" src="<?php echo base_url(); ?>/application/assets/js/login.js"></script>
         <script src="<?php echo base_url(); ?>/application/assets/js/jquery.easydropdown.js"></script>
@@ -48,6 +48,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <ul class="nav" id="nav">
                         <li class="<?= ($this->router->fetch_class() == "dashboads") ? "active" : "" ?>"><a href="<?php echo base_url(); ?>index.php/users/dashboards/index">Dashboards</a></li>
                         <li class="<?= ($this->router->fetch_class() == "lands") ? "active" : "" ?>"><a href="<?php echo base_url(); ?>index.php/users/lands/index">Manage Lahan</a></li>
+                        <li class="<?= ($this->router->fetch_class() == "products") ? "active" : "" ?>"><a href="<?php echo base_url(); ?>index.php/users/products/index">Manage Produk</a></li>
                         <div class="clearfix"></div>
                     </ul>
                     <script type="text/javascript" src="<?php echo base_url(); ?>/application/assets/js/responsive-nav.js"></script>

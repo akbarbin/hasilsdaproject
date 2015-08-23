@@ -50,7 +50,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <li class="<?= ($this->router->fetch_class() == "pages" and $title == "Pertanian") ? "active" : "" ?>"><a href="<?php echo base_url(); ?>index.php/pages/view/pertanian">Pertanian</a></li>
             <li class="<?= ($this->router->fetch_class() == "pages" and $title == "Perternakan") ? "active" : "" ?>"><a href="<?php echo base_url(); ?>index.php/pages/view/perternakan">Perternakan</a></li>
             <li class="<?= ($this->router->fetch_class() == "pages" and $title == "Tentangkami") ? "active" : "" ?>"><a href="<?php echo base_url(); ?>index.php/pages/view/tentangkami">Tentang</a></li>
-            <li class="<?= ($this->router->fetch_class() == "pages" and $title == "Perternakan") ? "active" : "" ?>"><a href="<?php echo base_url(); ?>index.php/pages/view/hubungikami">Kontak</a></li>
+            <li class="<?= ($this->router->fetch_class() == "pages" and $title == "Kontak") ? "active" : "" ?>"><a href="<?php echo base_url(); ?>index.php/pages/view/kontak">Kontak</a></li>
             <div class="clearfix"></div>
           </ul>
           <script type="text/javascript" src="<?php echo base_url(); ?>/application/assets/js/responsive-nav.js"></script>

@@ -1,84 +1,58 @@
-<div class="col-sm-9">
-  <!-- column 2 -->
-  <h1 class="page-header">Halaman Edit</h1>
+<div class="living_middle">
+    <div class="container">
+        <h1 class="page-header">Halaman Edit</h1>
 
-  <?php echo validation_errors() ?>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <div class="panel-title">
-        <i class="glyphicon glyphicon-wrench pull-right"></i>
-        <h4>Post Request</h4>
-      </div>
-    </div>
-    <div class="panel-body">
-      
-      <?php echo form_open("users/lands/edit/" . $land['pr_id'], array('class' => 'form form-vertical')) ?>
+        <?php echo validation_errors() ?>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="panel-title">
+                    <i class="glyphicon glyphicon-wrench pull-right"></i>
+                    <h4>Post Request</h4>
+                </div>
+            </div>
+            <div class="panel-body">
 
-      <div class="control-group">
-        <label>Judul</label>
-        <div class="controls">
-          <input type="text" value="<?php echo $land['pr_title'] ?>" name="pr_title" class="form-control" placeholder="Masukkan Judul">
-        </div>
-      </div>
+                <?php echo form_open("users/lands/edit/" . $land['la_id'], array('class' => 'form form-vertical')) ?>
 
-      <div class="control-group">
-        <label>Deskripsi</label>
-        <div class="controls">
-          <textarea class="form-control" value="<?php echo $land['pr_description'] ?>"name="pr_description"><?php echo $land['pr_description'] ?></textarea>
-        </div>
-      </div>
+                <div class="control-group">
+                    <label>Judul</label>
+                    <div class="controls">
+                        <input type="text" value="<?php echo set_value('la_title', $land['la_title']); ?>" name="la_title" class="form-control" placeholder="Masukkan Judul">
+                    </div>
+                </div>
 
-      <div class="control-group">
-        <label>Lokasi</label>
-        <div class="controls">
-          <input type="text" value="<?php echo $land['pr_location']; ?>" name="pr_location" class="form-control" placeholder="Masukkan Lokasi">
-        </div>
-      </div>
+                <div class="control-group">
+                    <label>Luas</label>
+                    <div class="controls">
+                        <input type="text" value="<?php echo set_value('la_wide_land', $land['la_wide_land']); ?>" name="la_wide_land" class="form-control" placeholder="Masukkan Luas Tanah">
+                    </div>
+                </div>
 
-      <div class="control-group">
-        <label>Foto 1</label>
-        <div class="controls">
-          <input type="file" name="photo" size="20"/>
-        </div>
-      </div>
+                <div class="control-group">
+                    <label>Lokasi</label>
+                    <div class="controls">
+                        <input type="text" value="<?php echo set_value('la_location', $land['la_location']); ?>" name="la_location" class="form-control" placeholder="Masukkan Lokasi">
+                        <input type="hidden" value="<?php echo set_value('la_user_id', current_user()->usr_id); ?>" name="la_user_id" class="form-control">
+                    </div>
+                </div>
 
-      <div class="control-group">
-        <label>Foto 2</label>
-        <div class="controls">
-          <input type="file" name="photo_2" size="20"/>
-        </div>
-      </div>
+                <div class="control-group">
+                    <div class="map">
+                        <iframe src="https://mapsengine.google.com/map/u/0/embed?mid=zIctX_bCgox8.kAdqIDIyzNVg" width="825" height="300"></iframe>
+                    </div>
+                </div>
 
-      <div class="control-group">
-        <label>Kategori</label>
-        <div class="controls">
-          <p>Pertanian</p>
-          <input type="hidden" name="pr_type" value="pertanian">
-        </div>
-      </div>
+                <div class="control-group">
+                    <label></label>
+                    <div class="controls">
+                        <button type="submit" class="btn btn-primary">
+                            Simpan
+                        </button>
+                    </div>
+                </div>
+                </form>
 
-      <div class="control-group">
-        <label>Peternak/Petani</label>
-        <div class="controls">
-          <select class="form-control" name="pr_user_id">
-            <option value="">Pilih Petani/Peternak</option>
-            <?php foreach ($option_users->result_array() as $option_user_item): ?>
-              <option value="<?php echo $option_user_item['usr_id'] ?>" <?php echo ($option_user_item['usr_id'] == $land['pr_user_id']) ? "selected" : "" ?>><?php echo $option_user_item['usr_username'] ?></option>
-            <?php endforeach; ?>
-          </select>
-        </div>
-      </div>
-
-      <div class="control-group">
-        <label></label>
-        <div class="controls">
-          <button type="submit" class="btn btn-primary">
-            Simpan
-          </button>
-        </div>
-      </div>
-      </form>
-
-    </div><!--/panel content-->
-  </div><!--/panel-->
-</div><!--/col-span-9-->
+            </div><!--/panel content-->
+        </div><!--/panel-->
+    </div><!--/col-span-9-->
+</div>
